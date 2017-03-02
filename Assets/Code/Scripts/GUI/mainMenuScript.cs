@@ -10,13 +10,12 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Handles UI interaction for the Main Menu scene
 /// </summary>
-public class MenuScript : MonoBehaviour
+public class mainMenuScript : MonoBehaviour
 {
     public Toggle AIToggle;
     public InputField Player1Name;
     public InputField Player2Name;
     public const int GAME_SCENE_INDEX = 1;
-    public const string AIPlayerName = "Bot";
     public string gameName = "game";
 
     public void Start()
@@ -40,7 +39,7 @@ public class MenuScript : MonoBehaviour
         {
             Player1Name.text = "Player1";
         }
-        if (Player2Name.text == "" || Player2Name.text == null|| Player2Name.text == "Enter Name Here...")
+        if (Player2Name.text == "" || Player2Name.text == null)
         {
             Player2Name.text = "Player2";
         }
@@ -49,7 +48,7 @@ public class MenuScript : MonoBehaviour
         if (AIToggle.isOn)
         {
             players.Add(new Human(new ResourceGroup(10, 10, 10), Player1Name.text, 500));
-            players.Add(new AI(new ResourceGroup(10, 10, 10), AIPlayerName, 500));
+            players.Add(new AI(new ResourceGroup(10, 10, 10), Player2Name.text, 500));
         }
         else
         {
@@ -57,12 +56,10 @@ public class MenuScript : MonoBehaviour
             players.Add(new Human(new ResourceGroup(10, 10, 10), Player1Name.text, 500));
         }
 
-
         GameHandler.CreateNew(gameName, players);
         GameHandler.GetGameManager().StartGame();
             
         SceneManager.LoadScene(GAME_SCENE_INDEX);   //LoadScene is asynchronous   
-
     }
 
     /// <summary>
@@ -71,22 +68,5 @@ public class MenuScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    /// <summary>
-    /// Toggles if AI is active
-    /// </summary>
-    public void ToggleAI()
-    {
-        if (AIToggle.isOn)
-        {
-            Player2Name.text = AIPlayerName;
-            Player2Name.interactable = false;
-        }
-        else
-        {
-            Player2Name.text = "Enter Name Here...";
-            Player2Name.interactable = true;
-        }
     }
 }

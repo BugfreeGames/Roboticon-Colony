@@ -142,7 +142,6 @@ public class canvasScript : MonoBehaviour
             throw new ArgumentException("Need a fresh timeout");
         }
         CurrentPhaseTimeout = timeout;
-        Debug.Log(String.Format("Set a new timeout {0}", timeout));
     }
 
     /// <summary>
