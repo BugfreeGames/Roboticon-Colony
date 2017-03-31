@@ -86,6 +86,7 @@ public class TileObject
         tileEventDisplay = tileGameObjectInScene.transform.GetChild(2).gameObject;
         tileCenter.SetActive(false);
         tileRoboticon.SetActive(false);
+        tileEventDisplay.SetActive(false);
     }
 
     //JBT changed this method to support a highlightable center of the tile

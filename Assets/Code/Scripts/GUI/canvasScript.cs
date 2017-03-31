@@ -99,23 +99,6 @@ public class canvasScript : MonoBehaviour
                 EventMessageTimeout = null;
             }
         }
-
-        //Made by JBT to create an even system if there is not already one. 
-        SetEventSystem();
-    }
-
-    // JBT
-    /// <summary>
-    /// Create an Event system if there is not already one in the scene
-    /// </summary>
-    public void SetEventSystem()
-    {
-        if (eventSystem != null)
-            return;
-
-        eventSystem = new GameObject();
-        eventSystem.AddComponent<EventSystem>();
-        eventSystem.AddComponent<StandaloneInputModule>();
     }
 
     // JBT Created this method

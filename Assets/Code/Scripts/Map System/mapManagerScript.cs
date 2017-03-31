@@ -21,7 +21,7 @@ public class mapManagerScript : MonoBehaviour
 	void Update ()
     {
         //Only allow tiles to be selected if a map exists and the current player is a human
-        if (map != null && GameHandler.gameManager.GetCurrentPlayer() is Human)
+        if (map != null && GameHandler.gameManager.GetCurrentPlayer() is Human && Camera.main != null)
         {
             CheckMouseHit();
         }

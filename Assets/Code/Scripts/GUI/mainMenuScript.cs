@@ -15,6 +15,7 @@ public class mainMenuScript : MonoBehaviour
     public Toggle AIToggle;
     public InputField Player1Name;
     public InputField Player2Name;
+    public GameObject eventSystem;
     public const int GAME_SCENE_INDEX = 1;
     public string gameName = "game";
 
@@ -55,6 +56,8 @@ public class mainMenuScript : MonoBehaviour
             players.Add(new Human(new ResourceGroup(10, 10, 10), Player2Name.text, 500));
             players.Add(new Human(new ResourceGroup(10, 10, 10), Player1Name.text, 500));
         }
+
+        Destroy(eventSystem);
 
         GameHandler.CreateNew(gameName, players);
         GameHandler.GetGameManager().StartGame();

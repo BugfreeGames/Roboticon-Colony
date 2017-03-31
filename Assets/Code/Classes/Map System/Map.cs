@@ -10,7 +10,7 @@ using System;
 public class Map
 {
     public static Vector2 MAP_DIMENSIONS = new Vector2(10,10);
-    public static Vector3 MAP_POSITION = new Vector3(-70, 61, 50);
+    public static Vector3 MAP_POSITION = new Vector3(-12, 1, -12);
 
     private List<Tile> tiles = new List<Tile>();
     private const int MAX_TILE_RESOURCE_PRODUCTION = 10;

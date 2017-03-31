@@ -6,7 +6,7 @@ using System;
 
 public class Tile
 {
-    public const float TILE_SIZE = 1.75f;
+    public const float TILE_SIZE = 0.45f;
     public const int ROBOTICON_UPGRADE_WEIGHT = 1;  //Currently each roboticon upgrade adds this amount to the production of its resource
     public RandomEvent CurrentEvent { get; private set; }
 

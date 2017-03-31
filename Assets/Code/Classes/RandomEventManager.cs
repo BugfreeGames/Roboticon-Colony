@@ -63,9 +63,6 @@ public static class RandomEventManager
                     EventConfiguration["texture"].Value
                 ));
         }
-
-        Debug.Log(String.Format("{0} Events added to the game.", InactiveEvents.Count));
-
     }
 
     /// <summary>
