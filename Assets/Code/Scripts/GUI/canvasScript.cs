@@ -67,7 +67,6 @@ public class canvasScript : MonoBehaviour
             /// If the timeout is finished then...
             if (CurrentPhaseTimeout.Finished)
             {
-                Debug.Log("Current Timeout Finished");
                 //Set the phase time to null
                 CurrentPhaseTimeout = null;
 
@@ -99,23 +98,6 @@ public class canvasScript : MonoBehaviour
                 EventMessageTimeout = null;
             }
         }
-
-        //Made by JBT to create an even system if there is not already one. 
-        SetEventSystem();
-    }
-
-    // JBT
-    /// <summary>
-    /// Create an Event system if there is not already one in the scene
-    /// </summary>
-    public void SetEventSystem()
-    {
-        if (eventSystem != null)
-            return;
-
-        eventSystem = new GameObject();
-        eventSystem.AddComponent<EventSystem>();
-        eventSystem.AddComponent<StandaloneInputModule>();
     }
 
     // JBT Created this method
@@ -125,8 +107,8 @@ public class canvasScript : MonoBehaviour
     /// <param name="newEvent">The event that has started</param>
     public void DisplayNewEventMessage(RandomEvent newEvent)
     {
-        NewEventTitle.text = newEvent.Title;
-        NewEventDescription.text = newEvent.Description;
+        NewEventTitle.text = newEvent.getTitle();
+        NewEventDescription.text = newEvent.getDescription();
         NewEventMessage.SetActive(true);
         EventMessageTimeout = new Timeout(8);
     }
@@ -142,7 +124,6 @@ public class canvasScript : MonoBehaviour
             throw new ArgumentException("Need a fresh timeout");
         }
         CurrentPhaseTimeout = timeout;
-        Debug.Log(String.Format("Set a new timeout {0}", timeout));
     }
 
     /// <summary>

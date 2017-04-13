@@ -28,7 +28,7 @@ public class gamblingScript : MonoBehaviour {
         Human currentPlayer = GameHandler.gameManager.GetHumanGui().GetCurrentHuman();
 
         //If the player doesn't have the requried amount of money then...
-        if(currentPlayer.GetMoney() < amount)
+        if(currentPlayer.GetMoney() <= amount)
         {
             SetResultText("You need at least £10 to play!", false);
             return;

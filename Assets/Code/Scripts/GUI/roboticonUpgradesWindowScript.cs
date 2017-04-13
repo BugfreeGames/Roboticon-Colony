@@ -13,6 +13,7 @@ public class roboticonUpgradesWindowScript : MonoBehaviour
     public Text foodUpgradesAmount;
     public Text energyUpgradesAmount;
     public Text oreUpgradesAmount;
+    public Text upgradePrice;
     public Text installedText; // JBT
 
     private Roboticon roboticon;
@@ -28,6 +29,7 @@ public class roboticonUpgradesWindowScript : MonoBehaviour
         foodUpgradesAmount.text = upgrades.food.ToString();
         energyUpgradesAmount.text = upgrades.energy.ToString();
         oreUpgradesAmount.text = upgrades.ore.ToString();
+        upgradePrice.text = "£" + Roboticon.UPGRADEVALUE;
         this.roboticon = roboticon;
         installedText.text = roboticon.IsInstalledToTile() ? "Yes" : "No";
         this.gameObject.SetActive(true);

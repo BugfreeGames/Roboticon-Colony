@@ -1,0 +1,1173 @@
+fileFormatVersion: 2
+guid: ce3a37d3dd6ccee46a1868d486d9bb44
+timeCreated: 1480114339
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 1-finger-l
+    100002: 1-finger-l_001
+    100004: 1-finger-l_002
+    100006: 1-finger-r
+    100008: 1-finger-r_001
+    100010: 1-finger-r_002
+    100012: 1-toe-l
+    100014: 1-toe-l_001
+    100016: 1-toe-l_002
+    100018: 1-toe-r
+    100020: 1-toe-r_001
+    100022: 1-toe-r_002
+    100024: 2-finger-l
+    100026: 2-finger-l_001
+    100028: 2-finger-l_002
+    100030: 2-finger-r
+    100032: 2-finger-r_001
+    100034: 2-finger-r_002
+    100036: 2-toe-l
+    100038: 2-toe-l_001
+    100040: 2-toe-l_002
+    100042: 2-toe-r
+    100044: 2-toe-r_001
+    100046: 2-toe-r_002
+    100048: 3-finger-l
+    100050: 3-finger-l_001
+    100052: 3-finger-l_002
+    100054: 3-finger-r
+    100056: 3-finger-r_001
+    100058: 3-finger-r_002
+    100060: 3-toe-l
+    100062: 3-toe-l_001
+    100064: 3-toe-l_002
+    100066: 3-toe-r
+    100068: 3-toe-r_001
+    100070: 3-toe-r_002
+    100072: 4-finger-l
+    100074: 4-finger-l_001
+    100076: 4-finger-l_002
+    100078: 4-finger-r
+    100080: 4-finger-r_001
+    100082: 4-finger-r_002
+    100084: 4-toe-l
+    100086: 4-toe-r
+    100088: //RootNode
+    100090: back
+    100092: back_001
+    100094: back_002
+    100096: control
+    100098: eye-l
+    100100: eye-r
+    100102: eyelid-l
+    100104: eyelid-r
+    100106: foot-l
+    100108: foot-r
+    100110: g-body
+    100112: g-skeleton
+    100114: gullet
+    100116: hand-l
+    100118: hand-r
+    100120: head
+    100122: jaw
+    100124: l-arm-l
+    100126: l-arm-l_001
+    100128: l-arm-l_002
+    100130: l-arm-l_003
+    100132: l-arm-r
+    100134: l-arm-r_001
+    100136: l-arm-r_002
+    100138: l-arm-r_003
+    100140: l-leg-l
+    100142: l-leg-r
+    100144: neck
+    100146: neck_001
+    100148: neck_002
+    100150: Plane
+    100152: stomach
+    100154: tail
+    100156: tail_001
+    100158: tail_002
+    100160: tail_003
+    100162: tail_004
+    100164: tail_005
+    100166: tail_006
+    100168: tail_007
+    100170: tail_008
+    100172: tail_009
+    100174: tail_010
+    100176: tail_011
+    100178: tongue
+    100180: tongue_001
+    100182: tongue_002
+    100184: tongue_003
+    100186: tongue_004
+    100188: u-arm-l
+    100190: u-arm-r
+    100192: u-leg-l
+    100194: u-leg-r
+    400000: 1-finger-l
+    400002: 1-finger-l_001
+    400004: 1-finger-l_002
+    400006: 1-finger-r
+    400008: 1-finger-r_001
+    400010: 1-finger-r_002
+    400012: 1-toe-l
+    400014: 1-toe-l_001
+    400016: 1-toe-l_002
+    400018: 1-toe-r
+    400020: 1-toe-r_001
+    400022: 1-toe-r_002
+    400024: 2-finger-l
+    400026: 2-finger-l_001
+    400028: 2-finger-l_002
+    400030: 2-finger-r
+    400032: 2-finger-r_001
+    400034: 2-finger-r_002
+    400036: 2-toe-l
+    400038: 2-toe-l_001
+    400040: 2-toe-l_002
+    400042: 2-toe-r
+    400044: 2-toe-r_001
+    400046: 2-toe-r_002
+    400048: 3-finger-l
+    400050: 3-finger-l_001
+    400052: 3-finger-l_002
+    400054: 3-finger-r
+    400056: 3-finger-r_001
+    400058: 3-finger-r_002
+    400060: 3-toe-l
+    400062: 3-toe-l_001
+    400064: 3-toe-l_002
+    400066: 3-toe-r
+    400068: 3-toe-r_001
+    400070: 3-toe-r_002
+    400072: 4-finger-l
+    400074: 4-finger-l_001
+    400076: 4-finger-l_002
+    400078: 4-finger-r
+    400080: 4-finger-r_001
+    400082: 4-finger-r_002
+    400084: 4-toe-l
+    400086: 4-toe-r
+    400088: //RootNode
+    400090: back
+    400092: back_001
+    400094: back_002
+    400096: control
+    400098: eye-l
+    400100: eye-r
+    400102: eyelid-l
+    400104: eyelid-r
+    400106: foot-l
+    400108: foot-r
+    400110: g-body
+    400112: g-skeleton
+    400114: gullet
+    400116: hand-l
+    400118: hand-r
+    400120: head
+    400122: jaw
+    400124: l-arm-l
+    400126: l-arm-l_001
+    400128: l-arm-l_002
+    400130: l-arm-l_003
+    400132: l-arm-r
+    400134: l-arm-r_001
+    400136: l-arm-r_002
+    400138: l-arm-r_003
+    400140: l-leg-l
+    400142: l-leg-r
+    400144: neck
+    400146: neck_001
+    400148: neck_002
+    400150: Plane
+    400152: stomach
+    400154: tail
+    400156: tail_001
+    400158: tail_002
+    400160: tail_003
+    400162: tail_004
+    400164: tail_005
+    400166: tail_006
+    400168: tail_007
+    400170: tail_008
+    400172: tail_009
+    400174: tail_010
+    400176: tail_011
+    400178: tongue
+    400180: tongue_001
+    400182: tongue_002
+    400184: tongue_003
+    400186: tongue_004
+    400188: u-arm-l
+    400190: u-arm-r
+    400192: u-leg-l
+    400194: u-leg-r
+    2300000: Plane
+    3300000: Plane
+    4300000: g-body
+    4300002: Plane
+    7400000: Default Take
+    7400002: godzilla-break-things
+    7400004: godzilla-walk
+    7400006: idle
+    9500000: //RootNode
+    13700000: g-body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 509
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: g-body
+        weight: 1
+      - path: g-skeleton
+        weight: 1
+      - path: g-skeleton/control
+        weight: 1
+      - path: g-skeleton/control/back
+        weight: 1
+      - path: g-skeleton/control/back/back_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/gullet
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003/tongue_004
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/neck_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/stomach
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001/1-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001/2-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001/3-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001/4-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002/1-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002/2-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002/3-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002/4-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001/1-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001/2-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001/3-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/4-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002/1-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002/2-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002/3-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/4-toe-r
+        weight: 1
+      - path: g-skeleton/control/tail
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010/tail_011
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: godzilla-break-things
+      takeName: godzilla-break-things
+      firstFrame: -1
+      lastFrame: 509
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: g-body
+        weight: 1
+      - path: g-skeleton
+        weight: 1
+      - path: g-skeleton/control
+        weight: 1
+      - path: g-skeleton/control/back
+        weight: 1
+      - path: g-skeleton/control/back/back_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/gullet
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003/tongue_004
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/neck_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/stomach
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001/1-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001/2-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001/3-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001/4-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002/1-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002/2-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002/3-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002/4-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001/1-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001/2-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001/3-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/4-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002/1-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002/2-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002/3-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/4-toe-r
+        weight: 1
+      - path: g-skeleton/control/tail
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010/tail_011
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: godzilla-walk
+      takeName: godzilla-walk
+      firstFrame: -1
+      lastFrame: 77
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: g-body
+        weight: 1
+      - path: g-skeleton
+        weight: 1
+      - path: g-skeleton/control
+        weight: 1
+      - path: g-skeleton/control/back
+        weight: 1
+      - path: g-skeleton/control/back/back_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/gullet
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003/tongue_004
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/neck_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/stomach
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001/1-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001/2-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001/3-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001/4-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002/1-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002/2-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002/3-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002/4-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001/1-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001/2-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001/3-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/4-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002/1-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002/2-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002/3-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/4-toe-r
+        weight: 1
+      - path: g-skeleton/control/tail
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010/tail_011
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: g-body
+        weight: 1
+      - path: g-skeleton
+        weight: 1
+      - path: g-skeleton/control
+        weight: 1
+      - path: g-skeleton/control/back
+        weight: 1
+      - path: g-skeleton/control/back/back_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/gullet
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eye-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/eyelid-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/head/jaw/tongue/tongue_001/tongue_002/tongue_003/tongue_004
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/neck/neck_001/neck_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/stomach
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/1-finger-l/1-finger-l_001/1-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/2-finger-l/2-finger-l_001/2-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/3-finger-l/3-finger-l_001/3-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-l/l-arm-l/l-arm-l_001/l-arm-l_002/l-arm-l_003/hand-l/4-finger-l/4-finger-l_001/4-finger-l_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/1-finger-r/1-finger-r_002/1-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/2-finger-r/2-finger-r_002/2-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/3-finger-r/3-finger-r_002/3-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002
+        weight: 1
+      - path: g-skeleton/control/back/back_001/back_002/u-arm-r/l-arm-r/l-arm-r_003/l-arm-r_002/l-arm-r_001/hand-r/4-finger-r/4-finger-r_002/4-finger-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/1-toe-l/1-toe-l_001/1-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/2-toe-l/2-toe-l_001/2-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/3-toe-l/3-toe-l_001/3-toe-l_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-l/l-leg-l/foot-l/4-toe-l
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/1-toe-r/1-toe-r_002/1-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/2-toe-r/2-toe-r_002/2-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/3-toe-r/3-toe-r_002/3-toe-r_001
+        weight: 1
+      - path: g-skeleton/control/back/u-leg-r/l-leg-r/foot-r/4-toe-r
+        weight: 1
+      - path: g-skeleton/control/tail
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010
+        weight: 1
+      - path: g-skeleton/control/tail/tail_001/tail_002/tail_003/tail_004/tail_005/tail_006/tail_007/tail_008/tail_009/tail_010/tail_011
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

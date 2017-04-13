@@ -168,7 +168,6 @@ public class Market : Agent
 
         ResourceGroup newSellPrice = new ResourceGroup(newFoodSell, newEnergySell, newOreSell);
         resourceSellingPrices = newSellPrice;
-        Debug.Log(resourceBuyingPrices.energy);
     }
 
     /// <summary>

@@ -102,6 +102,14 @@ public class HumanGui
         canvas.SetCurrentPhaseText(GameManager.StateToPhaseName(phase) + " Phase");
     }
 
+    public void DisplayRandomEventInfo(RandomEvent randomEvent)
+    {
+        if(!randomEvent.isNullEvent)
+        {
+            canvas.DisplayNewEventMessage(randomEvent);
+        }
+    }
+
     //Added by JBT to display information about the current AI
     /// <summary>
     /// Displays information about the AI for a few seconds, to simulate the AI taking a turn
