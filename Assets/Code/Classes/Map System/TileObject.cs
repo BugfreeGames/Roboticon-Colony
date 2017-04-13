@@ -10,9 +10,7 @@ public class TileObject
     private static GameObject tileHolder;
     private static GameObject TILE_GRID_GAMEOBJECT;
     private const string TILE_GRID_PREFAB_PATH = "Prefabs/Map/Tile Grid/tileGridPrefab";
-    private static Color TILE_DEFAULT_COLOUR = new Color(1, 1, 1);   //White
-    private static Color TILE_DEFAULT_ENEMY = new Color(1, 0, 0);    //Red
-    private static Color TILE_DEFAULT_OWNED = new Color(0, 0, 1);    //Blue
+    public static Color TILE_DEFAULT_COLOUR = new Color(1, 1, 1);   //White
     private static Color TILE_HOVER_COLOUR = new Color(1, 1, 0);     //Yellow
     private static Color TILE_SELECT_COLOUR = new Color(0, 1, 0);    //Green
     private static float TILE_HIGHLIGHT_ALPHA = 0.25f;                //Value between 0-1, which determines the strength of tile highlights, added by JBT
@@ -27,13 +25,6 @@ public class TileObject
     private GameObject tileRoboticon;           //Added by JBT to allow the display of installed roboticons on tiles
     private GameObject tileEventDisplay;        //Added by JBT to allow the display of any events happening on tiles
 
-    public enum TILE_OWNER_TYPE
-    {
-        CURRENT_PLAYER,
-        ENEMY,
-        UNOWNED
-    };
-
     public TileObject(int id, Vector2 position, Vector2 dimensions)
     {
         LoadTileGridGameobject();
@@ -46,6 +37,11 @@ public class TileObject
     public Vector2 GetTilePosition()
     {
         return this.position;
+    }
+
+    public Vector3 GetTileWorldPosition()
+    {
+        return tileGameObjectInScene.transform.position;
     }
 
     // Edited by JBT to help reduce the amount of clutter in the editor objects window
@@ -79,6 +75,7 @@ public class TileObject
         objectScale.z *= size.y;
         tileGameObjectInScene.transform.localScale = objectScale;
         tileGameObjectInScene.name = "Tile";
+        tileGameObjectInScene.tag = TagManager.mapTile;
         tileGameObjectInScene.AddComponent<mapTileScript>().SetTileId(tileId);
         tileGameObjectInScene.transform.parent = tileHolder.transform;
         tileCenter = tileGameObjectInScene.transform.GetChild(0).gameObject;
@@ -100,7 +97,6 @@ public class TileObject
             tileCenter.SetActive(true);
             tileCenter.GetComponent<MeshRenderer>().material.color = GetTransparentColor(TILE_SELECT_COLOUR, TILE_HIGHLIGHT_ALPHA);
             tileGameObjectInScene.GetComponent<MeshRenderer>().material.color = TILE_SELECT_COLOUR;
-            Debug.Log(string.Format("Clicked on tile with position ({0}, {1})", position.x, position.y));
         }
     }
 
@@ -122,10 +118,24 @@ public class TileObject
     /// <summary>
     /// Highlight the tile different colours, depending on who owns it
     /// </summary>
-    public void OnTileNormal(TILE_OWNER_TYPE ownerType)
+    public void OnTileNormal(Color tileColor, bool owned)
     {
         if (tileGameObjectInScene != null)
         {
+            tileGameObjectInScene.GetComponent<MeshRenderer>().material.color = tileColor;
+
+            if (owned)
+            {
+                tileCenter.SetActive(true);
+                tileCenter.GetComponent<MeshRenderer>().material.color = GetTransparentColor(tileColor, TILE_HIGHLIGHT_ALPHA);
+            }
+            else
+            {
+                tileCenter.SetActive(false);
+            }
+
+            /*
+
             switch (ownerType)
             {
                 case TILE_OWNER_TYPE.CURRENT_PLAYER:
@@ -143,6 +153,7 @@ public class TileObject
                     tileCenter.SetActive(false);
                     break;
             }
+            */
         }
     }
 

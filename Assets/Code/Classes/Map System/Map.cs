@@ -55,6 +55,14 @@ public class Map
         return numTiles;
     }
 
+    public void TickAllTileEventEffects()
+    {
+        foreach (Tile tile in tiles)
+        {
+            tile.RandomEventEffectTick();
+        }
+    }
+
     /// <summary>
     /// Instantiate the map into the current scene.
     /// </summary>

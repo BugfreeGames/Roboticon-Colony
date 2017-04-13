@@ -16,9 +16,6 @@ public class ResourceGroup
 
     public ResourceGroup(int food = 0, int energy = 0, int ore = 0)
     {
-        if (food < 0 || energy < 0 || ore < 0)
-            throw new System.ArgumentException("Cannot have negative amounts of a resource");
-
         this.food = food;
         this.energy = energy;
         this.ore = ore;
@@ -85,6 +82,25 @@ public class ResourceGroup
     public override int GetHashCode()
     {
         return food.GetHashCode() ^ energy.GetHashCode() << 2 ^ ore.GetHashCode() >> 2;
+    }
+
+    /// <summary>
+    /// If this resource group contains any negative resource values, sets them to 0.
+    /// </summary>
+    public void RemoveNegativeResources()
+    {
+        if (food < 0)
+        {
+            food = 0;
+        }
+        if (energy < 0)
+        {
+            energy = 0;
+        }
+        if (ore < 0)
+        {
+            ore = 0;
+        }
     }
 
     public int Sum()

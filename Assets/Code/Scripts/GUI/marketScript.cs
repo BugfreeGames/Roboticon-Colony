@@ -65,7 +65,6 @@ public class marketScript : MonoBehaviour
     void Start ()
     {
         market = GameHandler.GetGameManager().market;
-        Debug.Log((market == null).ToString());
         SetShownMarketPrices();
 
         foodBuyAmount.onValidateInput   += ValidatePositiveInput;       //Add the ValidatePositiveInput function to

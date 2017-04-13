@@ -21,7 +21,7 @@ public class mapManagerScript : MonoBehaviour
 	void Update ()
     {
         //Only allow tiles to be selected if a map exists and the current player is a human
-        if (map != null && GameHandler.gameManager.GetCurrentPlayer() is Human && Camera.main != null)
+        if (map != null && GameHandler.gameManager.GetCurrentPlayer() is Human)
         {
             CheckMouseHit();
         }
@@ -51,10 +51,11 @@ public class mapManagerScript : MonoBehaviour
         Camera mainCamera = Camera.main;
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+        int mask = 1 << 8;
 
-        if (Physics.Raycast(ray, out hit) && !eventSystem.IsPointerOverGameObject())   //Ray hit something and cursor is not over GUI object
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask) && !eventSystem.IsPointerOverGameObject())   //Ray hit something and cursor is not over GUI object
         {
-            if (hit.collider.tag == "mapTile")
+            if (hit.collider.tag == TagManager.mapTile)
             {
                 Tile hitTile = map.GetTile(hit.collider.GetComponent<mapTileScript>().GetTileId());
 
@@ -73,7 +74,7 @@ public class mapManagerScript : MonoBehaviour
                     }
                 }
                 
-                if (currentTileSelected != hitTile  )
+                if (currentTileSelected != hitTile)
                 {
                     if (Input.GetMouseButtonUp(LEFT_MOUSE_BUTTON))
                     {

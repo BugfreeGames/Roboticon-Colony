@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 33000011682829100}
   - component: {fileID: 23000012415707566}
   - component: {fileID: 65000011345362030}
-  m_Layer: 0
+  - component: {fileID: 54730149645641280}
+  m_Layer: 8
   m_Name: tileGridPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +41,7 @@ GameObject:
   - component: {fileID: 33506351454955598}
   - component: {fileID: 65178916446856156}
   - component: {fileID: 23218020875974346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +59,7 @@ GameObject:
   - component: {fileID: 33519587195059610}
   - component: {fileID: 65939409737339450}
   - component: {fileID: 23881044555542802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +77,7 @@ GameObject:
   - component: {fileID: 33519902343753246}
   - component: {fileID: 65986343402083158}
   - component: {fileID: 23719359739712000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileRoboticon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,6 +291,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686094034742228}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54730149645641280
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010116438540}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65000011345362030
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -297,7 +313,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010116438540}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 0.5, z: 10}

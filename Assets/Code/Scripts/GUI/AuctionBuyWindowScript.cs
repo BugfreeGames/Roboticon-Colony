@@ -19,7 +19,6 @@ public class AuctionBuyWindowScript : MonoBehaviour
 
     public Text AuctionBuyPrice;
     public GameObject AuctionResources;
-    public GameObject Price;
     public GameObject NoAuctionMessage;
     public GameObject NotEnoughMoneyMessage;
 
@@ -58,7 +57,6 @@ public class AuctionBuyWindowScript : MonoBehaviour
         if (auction != null)            //If there is an auction that the other player owns
         {
             AuctionResources.SetActive(true);
-            Price.SetActive(true);
             NoAuctionMessage.SetActive(false);
             foodAuctionAmount.text = auction.AuctionResources.food.ToString();
             energyAuctionAmount.text = auction.AuctionResources.energy.ToString();
@@ -77,7 +75,6 @@ public class AuctionBuyWindowScript : MonoBehaviour
     public void ClearWindow()
     {
         AuctionResources.SetActive(false);
-        Price.SetActive(false);
         NoAuctionMessage.SetActive(true);
     }
 }

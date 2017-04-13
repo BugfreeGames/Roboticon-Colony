@@ -67,7 +67,6 @@ public class canvasScript : MonoBehaviour
             /// If the timeout is finished then...
             if (CurrentPhaseTimeout.Finished)
             {
-                Debug.Log("Current Timeout Finished");
                 //Set the phase time to null
                 CurrentPhaseTimeout = null;
 
@@ -108,8 +107,8 @@ public class canvasScript : MonoBehaviour
     /// <param name="newEvent">The event that has started</param>
     public void DisplayNewEventMessage(RandomEvent newEvent)
     {
-        NewEventTitle.text = newEvent.Title;
-        NewEventDescription.text = newEvent.Description;
+        NewEventTitle.text = newEvent.getTitle();
+        NewEventDescription.text = newEvent.getDescription();
         NewEventMessage.SetActive(true);
         EventMessageTimeout = new Timeout(8);
     }

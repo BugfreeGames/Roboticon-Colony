@@ -1,6 +1,7 @@
 ﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
 
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// A player object, used to represent a player in the game, which can either be a Human or an AI
@@ -13,6 +14,20 @@ public abstract class Player : Agent
     protected int score;
     protected List<Roboticon> ownedRoboticons = new List<Roboticon>();
     protected List<Tile> ownedTiles = new List<Tile>();
+    protected Color playerTileColor;
+
+    /// <summary>
+    /// Returns the tile color assigned to this player
+    /// </summary>
+    public Color GetTileColor()
+    {
+        return playerTileColor;
+    }
+
+    public void SetTileColor(Color color)
+    {
+        playerTileColor = color;
+    }
 
     /// <summary>
     /// Calculates the players score based off of the amount of tiles and resources that they own and upgraded roboticons they have

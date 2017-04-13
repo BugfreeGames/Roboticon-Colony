@@ -36,6 +36,7 @@ public class GameManager
     private Map map;
     private States currentState = States.ACQUISITION;
     private HumanGui humanGui;
+    private RandomEventStore randomEventStore;
 
     public static string StateToPhaseName(States state)
     {
@@ -60,9 +61,9 @@ public class GameManager
 
     public void StartGame()
     {
+        randomEventStore = new RandomEventStore();
         SetUpGui();
         SetUpMap();
-        RandomEventManager.InitialiseEvents();
         PlayerAct();
     }
 
@@ -161,7 +162,9 @@ public class GameManager
             //If we're moving on to the production phase, run the function that handles the logic for the production phase.
             if (currentState == (States.PRODUCTION - 1))
             {
-                RandomEventManager.ManageAndTriggerEvents();
+                RandomEvent newEvent = new RandomEvent(randomEventStore);
+                newEvent.Instantiate();
+                humanGui.DisplayRandomEventInfo(newEvent);
                 ProcessProductionPhase();
                 currentState++;
             }
@@ -248,6 +251,8 @@ public class GameManager
         {
             players[i].Produce();
         }
+
+        map.TickAllTileEventEffects();
     }
 
     /// <summary>

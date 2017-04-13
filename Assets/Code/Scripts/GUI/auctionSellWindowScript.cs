@@ -19,6 +19,7 @@ public class auctionSellWindowScript : MonoBehaviour
 
     public InputField AuctionPrice;
     public GameObject AuctionListedText;
+    public GameObject auctionInfo;
 
     #region errorMessage labels
     public GameObject NotEnoughResourcesMessage;
@@ -107,7 +108,7 @@ public class auctionSellWindowScript : MonoBehaviour
         oreAuctionAmount.text = "0";
         AuctionPrice.text = "0";
         AuctionListedText.SetActive(false);
-        gameObject.SetActive(true);
+        auctionInfo.SetActive(true);
         NotEnoughResourcesMessage.SetActive(false);
         NoResourcesMessage.SetActive(false);
         NoPriceMessage.SetActive(false);
@@ -117,7 +118,7 @@ public class auctionSellWindowScript : MonoBehaviour
         {
             if (currentPlayer == curAuction.Owner)
             {
-                gameObject.SetActive(false);
+                auctionInfo.SetActive(false);
                 AuctionListedText.SetActive(true);
             }
         }
@@ -129,7 +130,7 @@ public class auctionSellWindowScript : MonoBehaviour
     public void ClearWindow()
     {
         AuctionListedText.SetActive(true);
-        gameObject.SetActive(false);
+        auctionInfo.SetActive(false);
         NotEnoughResourcesMessage.SetActive(false);
         NoResourcesMessage.SetActive(false);
         NoPriceMessage.SetActive(false);
