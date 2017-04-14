@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1276354686298672}
+  m_IsPrefabParent: 1
+--- !u!1 &1276354686298672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4642922702568618}
+  - component: {fileID: 114734815635849618}
+  - component: {fileID: 114544680031291926}
+  m_Layer: 0
+  m_Name: SpiderEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4642922702568618
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276354686298672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.4, y: -10.820761, z: 9.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114544680031291926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276354686298672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2d9d57307dad040883cf6cfcd50796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spiderSpawnHeight: 50
+  spiderSpawnRadius: 20
+  spiderGameObject: {fileID: 1418408088444850, guid: 3f0a793bad1ca2a42961e90c9e33b389,
+    type: 2}
+--- !u!114 &114734815635849618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276354686298672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd61d4bcba7dbe4980c5daa9776a573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Dying spider
+  description: An aged giant spider has wondered into Heslington to wreak havoc before
+    leaving its enormous carcass for you to deal with. While it may be a good source
+    of food, affected tiles will suffer in ore and energy production.

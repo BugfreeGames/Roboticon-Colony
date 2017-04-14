@@ -2087,7 +2087,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1653459140723032}
-  m_LocalRotation: {x: -0.6984676, y: -0.012478915, z: 0.7154279, w: -0.012263208}
+  m_LocalRotation: {x: -0.69846755, y: -0.012478913, z: 0.7154278, w: -0.012263206}
   m_LocalPosition: {x: -0.3602541, y: -0.000000007450581, z: -0.00000013282988}
   m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
   m_Children: []
@@ -3166,8 +3166,8 @@ MonoBehaviour:
   - {fileID: 65947362503225924}
   - {fileID: 65823461844758680}
   - {fileID: 65207066823850440}
-  defaultWalkSpeed: 5.2
-  walkStopFalloff: 1.5
+  defaultWalkSpeed: 6.3
+  walkStopFalloff: 2.5
 --- !u!137 &137774338289711084
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

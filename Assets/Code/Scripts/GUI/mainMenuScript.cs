@@ -166,8 +166,13 @@ public class mainMenuScript : MonoBehaviour
         setupPlayers[numPlayersShown].Show();
 
         numPlayersShown++;
-        addPlayerButton.transform.Translate(0, -30, 0);
-        removePlayerButton.transform.Translate(0, -30, 0);
+        Vector3 oldAddPos = addPlayerButton.transform.localPosition;
+        Vector3 newAddPlayerPos = new Vector3(oldAddPos.x, oldAddPos.y - 30, oldAddPos.z);
+        addPlayerButton.transform.localPosition = newAddPlayerPos;
+        
+        Vector3 oldRemPos = removePlayerButton.transform.localPosition;
+        Vector3 newRemPlayerPos = new Vector3(oldRemPos.x, oldRemPos.y - 30, oldRemPos.z);
+        removePlayerButton.transform.localPosition = newRemPlayerPos;
         removePlayerButton.SetActive(true);
 
         if (numPlayersShown == 4)
@@ -180,8 +185,14 @@ public class mainMenuScript : MonoBehaviour
     {
         numPlayersShown--;
         setupPlayers[numPlayersShown].Hide();
-        addPlayerButton.transform.Translate(0, 30, 0);
-        removePlayerButton.transform.Translate(0, 30, 0);
+
+        Vector3 oldAddPos = addPlayerButton.transform.localPosition;
+        Vector3 newAddPlayerPos = new Vector3(oldAddPos.x, oldAddPos.y + 30, oldAddPos.z);
+        addPlayerButton.transform.localPosition = newAddPlayerPos;
+
+        Vector3 oldRemPos = removePlayerButton.transform.localPosition;
+        Vector3 newRemPlayerPos = new Vector3(oldRemPos.x, oldRemPos.y + 30, oldRemPos.z);
+        removePlayerButton.transform.localPosition = newRemPlayerPos;
         addPlayerButton.SetActive(true);
 
         if (numPlayersShown == 2)

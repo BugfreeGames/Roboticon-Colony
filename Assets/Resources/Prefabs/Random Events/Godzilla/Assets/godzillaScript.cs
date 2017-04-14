@@ -23,7 +23,7 @@ public class godzillaScript : MonoBehaviour
         foreach (BoxCollider collider in damagePointColliders)
         {
             damagePointScript damagePointScript = collider.gameObject.AddComponent<damagePointScript>();
-            damagePointScript.SetResourceEffects(new RandomEventEffect(new ResourceGroup(-1, -1, -1), 3));
+            damagePointScript.SetResourceEffects(new RandomEventEffect(new ResourceGroup(-1, -1, -1), 0));
             damagePointScript.SetHitEffect(hitEffect);
         }
 

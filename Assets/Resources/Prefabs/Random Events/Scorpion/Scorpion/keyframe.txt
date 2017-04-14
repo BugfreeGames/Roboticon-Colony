@@ -1,0 +1,21 @@
+04-24 atack1
+25-50 attack2
+54-78 walk
+80-159 slow walk
+160-203 growling 1
+204-249 jump down
+250-266 idle
+267-350 jump up
+350-500 big attack
+510-620 idle to attack
+620-700 attack down
+710-781 attck down 2
+782-820 growling 2
+821-835 short attack
+835-931 run to attack
+
+
+
+
+
+

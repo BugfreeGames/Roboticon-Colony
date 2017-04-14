@@ -30,6 +30,10 @@ public class damagePointScript : MonoBehaviour
             StartCoroutine(SetColliderActiveAfterDelay());
             damagePointCollider.enabled = false;
         }
+        else
+        {
+            damagePointCollider.enabled = true;
+        }
     }
 	
 	// Update is called once per frame

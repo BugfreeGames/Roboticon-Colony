@@ -177,14 +177,11 @@ public class Tile
         for (int i = currentEvents.Count - 1; i >= 0; i--)
         {
             RandomEventEffect effect = currentEvents[i];
+            effect.Tick();
 
             if (effect.IsFinished())
             {
                 currentEvents.Remove(effect);
-            }
-            else
-            {
-                effect.Tick();
             }
         }
     }

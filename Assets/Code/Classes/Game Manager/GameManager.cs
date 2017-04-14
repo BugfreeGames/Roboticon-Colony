@@ -162,9 +162,6 @@ public class GameManager
             //If we're moving on to the production phase, run the function that handles the logic for the production phase.
             if (currentState == (States.PRODUCTION - 1))
             {
-                RandomEvent newEvent = new RandomEvent(randomEventStore);
-                newEvent.Instantiate();
-                humanGui.DisplayRandomEventInfo(newEvent);
                 ProcessProductionPhase();
                 currentState++;
             }
@@ -183,6 +180,14 @@ public class GameManager
                 currentState++;
             }
             currentPlayerIndex = 0;
+        }
+
+        if(currentState == States.PRODUCTION)
+        {
+            MonoBehaviour.print("processing production stuff");
+            RandomEvent newEvent = new RandomEvent(randomEventStore);
+            newEvent.Instantiate();
+            humanGui.DisplayRandomEventInfo(newEvent);
         }
 
         //Call the Act function for the current player, passing the state to it.

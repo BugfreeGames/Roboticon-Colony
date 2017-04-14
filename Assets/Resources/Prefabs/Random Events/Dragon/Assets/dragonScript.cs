@@ -18,16 +18,15 @@ public class dragonScript : MonoBehaviour
         transform.parent.Rotate(0, Random.Range(0, 360), 0);
 
         damagePointScript fireHitDamagePointScript = fireHitRegion.gameObject.AddComponent<damagePointScript>();
-        RandomEventEffect fireDamageEffect = new RandomEventEffect(new ResourceGroup(-1, -1, -1), 1);
+        RandomEventEffect fireDamageEffect = new RandomEventEffect(new ResourceGroup(-1, -1, -1), 2);
         fireDamageEffect.SetVisualEffect(fireAfterGlowEffect);
         fireHitDamagePointScript.SetResourceEffects(fireDamageEffect);
         fireHitDamagePointScript.SetHitStartDelay(fireStartTime);
         fireHitDamagePointScript.SetHitDelay(0);
         fireHitDamagePointScript.SetDoActivateRigidbody(true);
 
-
         damagePointScript landingDamagePointScript = landingHitRegion.gameObject.AddComponent<damagePointScript>();
-        landingDamagePointScript.SetResourceEffects(new RandomEventEffect(new ResourceGroup(-3, -3, -3), 2));
+        landingDamagePointScript.SetResourceEffects(new RandomEventEffect(new ResourceGroup(-3, -3, -3), 3));
         landingDamagePointScript.SetHitEffect(landingHitEffect);
         landingDamagePointScript.SetHitDelay(0);
         landingDamagePointScript.SetOneShotEffect(true);

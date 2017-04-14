@@ -43,6 +43,16 @@ public class RandomEventEffect
         }
     }
 
+    /// <summary>
+    /// Use this to set the visualEffectInWorld parameter to a GameObject which already exists in the scene.
+    /// Useful for cleaning up GameObject debris.
+    /// </summary>
+    /// <param name="effect"></param>
+    public void SetVisualEffectInWorld(GameObject effect)
+    {
+        visualEffectInWorld = effect;
+    }
+
     public void EndEffect()
     {
         if(visualEffectInWorld != null)
