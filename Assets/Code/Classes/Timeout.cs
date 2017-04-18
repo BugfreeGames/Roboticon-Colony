@@ -12,11 +12,13 @@ public class Timeout
     private int timeAllowed;
     private Stopwatch stopwatch;
 
+    private bool isRandomEventTimeout;
+
     /// <summary>
     /// Creates a timout object. use to keep track of how long phases are going
     /// </summary>
     /// <param name="time">time in seconds of the timeout</param>
-    public Timeout(int time)
+    public Timeout(int time, bool isRandomEventTimeout = false)
     {
         if (time < 1)
         {
@@ -24,6 +26,7 @@ public class Timeout
         }
 
         timeAllowed = time;
+        this.isRandomEventTimeout = isRandomEventTimeout;
 
         stopwatch = new Stopwatch();
         stopwatch.Start();

@@ -4,5 +4,9 @@ using UnityEngine;
 
 public static class TagManager
 {
-    public static string mapTile = "mapTile";
+    public const string mapTile = "mapTile";
+    public const string playGame = "playGame";
+    public const string quit = "quit";
+    public const string credits = "credits";
+    public const string back = "back";
 }

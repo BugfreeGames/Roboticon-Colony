@@ -74,3 +74,4 @@ MonoBehaviour:
   description: A horde of radioactive scorpions has burrowed its way to campus from
     the ruins of the Biology department. What hath science wrought? Affected tiles
     will be temporarily poisoned, reducing food production heavily.
+  eventTime: 15

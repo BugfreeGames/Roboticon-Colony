@@ -10,4 +10,5 @@ public class EventInfo : MonoBehaviour
 {
     public string title;
     public string description;
+    public int eventTime;
 }

@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: e3ef1da26594ce74f8003a0ed629b77f
+timeCreated: 1480089448
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: All_Legs_Bone
+    100002: Armature
+    100004: Bone
+    100006: Bone_001
+    100008: Bone_002
+    100010: Bone_003
+    100012: Bone_004
+    100014: Bone_005
+    100016: Bone_006
+    100018: Bone_007
+    100020: Bone_008
+    100022: Bone_Door_Down_L
+    100024: Bone_Door_Down_R
+    100026: Bone_Door_UP_L
+    100028: Bone_Door_UP_R
+    100030: Bone_for_Legss
+    100032: Bone_L
+    100034: Bone_R
+    100036: Door_Bone_Open
+    100038: Empty
+    100040: Open_Door_L
+    100042: Open_Door_R
+    100044: Plane
+    100046: Shuttle_000
+    100048: Shuttle_001
+    100050: Shuttle_002
+    100052: Shuttle_003
+    100054: Shuttle_004
+    100056: Shuttle_005
+    100058: Shuttle_006
+    100060: Shuttle_007
+    100062: Shuttle_008
+    100064: Shuttle_009
+    100066: Shuttle_010
+    100068: Shuttle_011
+    100070: Shuttle_012
+    100072: Shuttle_013
+    100074: Shuttle_014
+    100076: Shuttle_015
+    100078: Shuttle_024
+    100080: Shuttle_All_Mover
+    100082: //RootNode
+    400000: All_Legs_Bone
+    400002: Armature
+    400004: Bone
+    400006: Bone_001
+    400008: Bone_002
+    400010: Bone_003
+    400012: Bone_004
+    400014: Bone_005
+    400016: Bone_006
+    400018: Bone_007
+    400020: Bone_008
+    400022: Bone_Door_Down_L
+    400024: Bone_Door_Down_R
+    400026: Bone_Door_UP_L
+    400028: Bone_Door_UP_R
+    400030: Bone_for_Legss
+    400032: Bone_L
+    400034: Bone_R
+    400036: Door_Bone_Open
+    400038: Empty
+    400040: Open_Door_L
+    400042: Open_Door_R
+    400044: Plane
+    400046: Shuttle_000
+    400048: Shuttle_001
+    400050: Shuttle_002
+    400052: Shuttle_003
+    400054: Shuttle_004
+    400056: Shuttle_005
+    400058: Shuttle_006
+    400060: Shuttle_007
+    400062: Shuttle_008
+    400064: Shuttle_009
+    400066: Shuttle_010
+    400068: Shuttle_011
+    400070: Shuttle_012
+    400072: Shuttle_013
+    400074: Shuttle_014
+    400076: Shuttle_015
+    400078: Shuttle_024
+    400080: Shuttle_All_Mover
+    400082: //RootNode
+    2300000: All_Legs_Bone
+    2300002: Bone_for_Legss
+    2300004: Door_Bone_Open
+    2300006: Plane
+    2300008: Shuttle_All_Mover
+    3300000: All_Legs_Bone
+    3300002: Bone_for_Legss
+    3300004: Door_Bone_Open
+    3300006: Plane
+    3300008: Shuttle_All_Mover
+    4300000: All_Legs_Bone
+    4300002: Bone_for_Legss
+    4300004: Shuttle_All_Mover
+    4300006: Door_Bone_Open
+    4300008: Plane
+    4300010: Shuttle_015
+    4300012: Shuttle_014
+    4300014: Shuttle_013
+    4300016: Shuttle_012
+    4300018: Shuttle_011
+    4300020: Shuttle_010
+    4300022: Shuttle_009
+    4300024: Shuttle_008
+    4300026: Shuttle_002
+    4300028: Shuttle_007
+    4300030: Shuttle_006
+    4300032: Shuttle_005
+    4300034: Shuttle_004
+    4300036: Shuttle_003
+    4300038: Shuttle_000
+    4300040: Shuttle_024
+    4300042: Shuttle_001
+    7400000: Default Take
+    7400002: Doors
+    7400004: Shuttel_Fly_Animation
+    9500000: //RootNode
+    13700000: Shuttle_000
+    13700002: Shuttle_001
+    13700004: Shuttle_002
+    13700006: Shuttle_003
+    13700008: Shuttle_004
+    13700010: Shuttle_005
+    13700012: Shuttle_006
+    13700014: Shuttle_007
+    13700016: Shuttle_008
+    13700018: Shuttle_009
+    13700020: Shuttle_010
+    13700022: Shuttle_011
+    13700024: Shuttle_012
+    13700026: Shuttle_013
+    13700028: Shuttle_014
+    13700030: Shuttle_015
+    13700032: Shuttle_024
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

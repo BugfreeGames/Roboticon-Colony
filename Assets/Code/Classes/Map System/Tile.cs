@@ -256,5 +256,31 @@ public class Tile
             newEffect.InstantiateVisualEffect(tileObject.GetTileWorldPosition());
             currentEvents.Add(newEffect);
         }
+
+        if(newEffect.DoDestroyRoboticons())
+        {
+            DestroyAllRoboticons();
+        }
+    }
+
+    /// <summary>
+    /// Destroys all roboticons on this tile, removing them from their owner's roboticon list and the tile.
+    /// </summary>
+    private void DestroyAllRoboticons()
+    {
+        for(int i = installedRoboticons.Count - 1; i >= 0; i --)
+        {
+            Roboticon roboticon = installedRoboticons[i];
+            UninstallRoboticon(roboticon);
+
+            try
+            {
+                owner.RemoveRoboticon(roboticon);
+            }
+            catch (System.ArgumentException)
+            {
+                throw new System.ArgumentException("Roboticon not owned by tile owner was installed to tile. Tried to remove but failed.");
+            }
+        }
     }
 }

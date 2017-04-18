@@ -115,7 +115,7 @@ public abstract class Player : Agent
     }
 
     /// <summary>
-    /// Gets a list roboticons
+    /// Gets the list of roboticons (NOT A COPY)
     /// </summary>
     /// <returns>The list of owned tiles</returns>
     public List<Roboticon> GetRoboticons()
@@ -124,12 +124,24 @@ public abstract class Player : Agent
     }
 
     /// <summary>
-    /// Add a roboticon to a list of roboticons owned by the player
+    /// Add a roboticon to a list of roboticons owned by the player. Throws ArgumentException if given a roboticon which does not belong to this Player.
     /// </summary>
     /// <param name="roboticon">The roboticon to acquire</param>
     public void AcquireRoboticon(Roboticon roboticon)
     {
         ownedRoboticons.Add(roboticon);
+    }
+
+    public void RemoveRoboticon(Roboticon roboticon)
+    {
+        if (ownedRoboticons.Contains(roboticon))
+        {
+            ownedRoboticons.Remove(roboticon);
+        }
+        else
+        {
+            throw new System.ArgumentException("Given roboticon does not belong to this Player.");
+        }
     }
 
     /// <summary>

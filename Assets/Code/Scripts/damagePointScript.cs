@@ -13,6 +13,7 @@ public class damagePointScript : MonoBehaviour
     bool readyToHit = true;
     bool oneShotEffect = false;
     bool doActivateRigidbody = false;
+    bool doDestroyAfterHit = false;
     float rigidbodyTimeout = 5;
 
 	// Use this for initialization
@@ -87,6 +88,14 @@ public class damagePointScript : MonoBehaviour
     }
 
     /// <summary>
+    /// Set to true to have the gameobject that this script is attached to be destroyed after the first hit.
+    /// </summary>
+    public void SetDoDestroyAfterHit(bool doDestroyAfterHit)
+    {
+        this.doDestroyAfterHit = doDestroyAfterHit;
+    }
+
+    /// <summary>
     /// Set to true to enable a rigidbody on the collider object for rigidbodyTimeout seconds.
     /// </summary>
     /// <param name="doActivateRigidbody"></param>
@@ -116,11 +125,15 @@ public class damagePointScript : MonoBehaviour
                 GameObject.Instantiate(hitEffect, transform.position, Quaternion.identity);
             }
 
+            if(doDestroyAfterHit)
+            {
+                Destroy(gameObject);
+            }
+
             if (oneShotEffect)
             {
                 hitEffect = null;
             }
-
 
             if (delayBetweenHits > 0)
             {

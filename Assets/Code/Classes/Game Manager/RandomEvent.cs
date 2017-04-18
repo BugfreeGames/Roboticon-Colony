@@ -8,6 +8,7 @@ public class RandomEvent
     private GameObject eventGameObject;
     private string eventTitle;
     private string eventDescription;
+    private int eventTime;
 
     public bool isNullEvent = false;
 
@@ -21,6 +22,7 @@ public class RandomEvent
 
             eventTitle = eventInfo.title;
             eventDescription = eventInfo.description;
+            eventTime = eventInfo.eventTime;
         }
         else
         {
@@ -56,5 +58,15 @@ public class RandomEvent
         }
 
         return eventDescription;
+    }
+
+    public int getEventTime()
+    {
+        if(isNullEvent)
+        {
+            return 3;
+        }
+
+        return eventTime;
     }
 }

@@ -17,6 +17,16 @@ public class spiderScript : MonoBehaviour
     private static string ANIM_NAME_DIE_1 = "die";
     private static string ANIM_NAME_DIE_2 = "die_2";
 
+    private static ResourceGroup TILE_DAMAGE_RESOURCE_EFFECT = new ResourceGroup(-1, -1, -1);
+    private static int TILE_DAMAGE_RESOURCE_TURNS = 3;
+    private static ResourceGroup TILE_DEATH_RESOURCE_EFFECT = new ResourceGroup(10, -3, -3);
+    private static int TILE_DEATH_RESOURCE_TURNS = 3;
+
+    private static int MIN_WALK_CYCLES = 1;
+    private static int MAX_WALK_CYCLES = 3;
+    private static float WALK_ANIM_LENGTH = 0.625f;
+    private static float ATTACK_ANIM_LENGTH = 1.125f;
+
     Animator animator;
 
     float walkSpeed = 0;
@@ -49,7 +59,7 @@ public class spiderScript : MonoBehaviour
             foreach (BoxCollider col in legColliderHitPoints)
             {
                 damagePointScript damageScript = col.gameObject.AddComponent<damagePointScript>();
-                damageScript.SetResourceEffects(new RandomEventEffect(new ResourceGroup(-1, -1, -1), 3));
+                damageScript.SetResourceEffects(new RandomEventEffect(TILE_DAMAGE_RESOURCE_EFFECT, TILE_DAMAGE_RESOURCE_TURNS));
             }
 
             damageScriptsAdded = true;
@@ -99,7 +109,7 @@ public class spiderScript : MonoBehaviour
             if(col.tag == TagManager.mapTile)
             {
                 Tile tile = GameHandler.GetGameManager().GetMap().GetTile(col.GetComponent<mapTileScript>().GetTileId());
-                RandomEventEffect deathEffect = new RandomEventEffect(new ResourceGroup(10, -3, -3), 3);
+                RandomEventEffect deathEffect = new RandomEventEffect(TILE_DEATH_RESOURCE_EFFECT, TILE_DEATH_RESOURCE_TURNS);
                 deathEffect.SetVisualEffectInWorld(gameObject);
                 tile.ApplyEventEffect(deathEffect);
             }
@@ -135,15 +145,15 @@ public class spiderScript : MonoBehaviour
 
     private IEnumerator DelaySpiderAttack()
     {
-        yield return new WaitForSeconds(0.625f * Random.Range(1, 3.0f));
+        yield return new WaitForSeconds(WALK_ANIM_LENGTH * Random.Range(MIN_WALK_CYCLES, MAX_WALK_CYCLES));
         animator.SetTrigger(ANIM_ATTACK_TRIGGER);
         StartCoroutine(DelaySpiderDie());
     }
 
     private IEnumerator DelaySpiderDie()
     {
-        yield return new WaitForSeconds(1.125f * Random.Range(1, 3.0f));
-        if (Random.Range(0, 2) == 0)
+        yield return new WaitForSeconds(ATTACK_ANIM_LENGTH * Random.Range(MIN_WALK_CYCLES, MAX_WALK_CYCLES));
+        if (Random.Range(0, 2) == 0)    //50 percent chance for each death animation
         {
             animator.SetTrigger(ANIM_DIE_1_TRIGGER);
         }

@@ -184,10 +184,10 @@ public class GameManager
 
         if(currentState == States.PRODUCTION)
         {
-            MonoBehaviour.print("processing production stuff");
             RandomEvent newEvent = new RandomEvent(randomEventStore);
             newEvent.Instantiate();
             humanGui.DisplayRandomEventInfo(newEvent);
+            ApplyRandomEventTimeout(newEvent.getEventTime());
         }
 
         //Call the Act function for the current player, passing the state to it.
@@ -231,7 +231,16 @@ public class GameManager
         {
             CurrentPhaseTimeout = new Timeout(30);
         }
-        humanGui.GetCanvas().SetPhaseTimeout(CurrentPhaseTimeout);
+
+        if (currentState != States.PRODUCTION)      //phase timout for production phase handled in ApplyRandomEventTimeout as it is dependent on the random event instantiated.
+        {
+            humanGui.GetCanvas().SetPhaseTimeout(CurrentPhaseTimeout);
+        }
+    }
+
+    private void ApplyRandomEventTimeout(int randomEventTime)
+    {
+        humanGui.GetCanvas().SetPhaseTimeout(new Timeout(randomEventTime));
     }
     
     //Created by JBT to simulate an AI taking its turn

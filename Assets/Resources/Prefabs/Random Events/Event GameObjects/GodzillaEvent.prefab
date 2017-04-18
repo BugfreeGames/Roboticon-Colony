@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   godzillaGameObject: {fileID: 1898678907927954, guid: 38124c15e079cdd4e9c6bbc215301f28,
     type: 2}
-  spawnRadiusFromOrigin: 80
+  spawnRadiusFromOrigin: 60
 --- !u!114 &114815838279442648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,3 +150,4 @@ MonoBehaviour:
   title: Kaiju!
   description: You have awoken Zilla! Run for your lives! Tiles crushed by Zilla are
     permanently damaged.
+  eventTime: 44

@@ -14,6 +14,12 @@ public class godzillaScript : MonoBehaviour
 
     private static string TRIGGER_BREAK_THINGS = "breakThings";
     private static string TRIGGER_WALK = "startWalking";
+    private static float WALK_ANIM_LENGTH = 3.25f;
+    private static float BREAK_THINGS_ANIM_LENGTH = 22.3f;
+    private static int MIN_WALK_CYCLES = 2;
+    private static int MAX_WALK_CYCLES = 3;
+    private static int WALK_AWAY_TIMEOUT = 15;
+    private static ResourceGroup tileHitEffect = new ResourceGroup(-1, -1, -1);
 
     private bool breakingThings = false;
 
@@ -23,7 +29,7 @@ public class godzillaScript : MonoBehaviour
         foreach (BoxCollider collider in damagePointColliders)
         {
             damagePointScript damagePointScript = collider.gameObject.AddComponent<damagePointScript>();
-            damagePointScript.SetResourceEffects(new RandomEventEffect(new ResourceGroup(-1, -1, -1), 0));
+            damagePointScript.SetResourceEffects(new RandomEventEffect(tileHitEffect, 0));  //0 turn effect = permanent
             damagePointScript.SetHitEffect(hitEffect);
         }
 
@@ -51,20 +57,20 @@ public class godzillaScript : MonoBehaviour
 
     private IEnumerator DelayBreakThings()
     {
-        yield return new WaitForSeconds(Random.Range(3, 5) * 3.25f);
+        yield return new WaitForSeconds(Random.Range(MIN_WALK_CYCLES, MAX_WALK_CYCLES) * WALK_ANIM_LENGTH);
         breakingThings = true;
         GetComponent<Animator>().SetTrigger(TRIGGER_BREAK_THINGS);
-        GetComponent<AudioSource>().PlayDelayed(3.2f);
+        GetComponent<AudioSource>().PlayDelayed(WALK_ANIM_LENGTH);
         StartCoroutine(WalkAway());
     }
 
     private IEnumerator WalkAway()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(BREAK_THINGS_ANIM_LENGTH / 2);
         GetComponent<Animator>().SetTrigger(TRIGGER_WALK);
-        yield return new WaitForSeconds(12.3f);
+        yield return new WaitForSeconds(BREAK_THINGS_ANIM_LENGTH / 2);
         walkSpeed = defaultWalkSpeed;
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(WALK_AWAY_TIMEOUT);
         Destroy(transform.parent.gameObject);
     }
 }

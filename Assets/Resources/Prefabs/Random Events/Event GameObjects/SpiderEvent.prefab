@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2d9d57307dad040883cf6cfcd50796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spiderSpawnHeight: 50
+  spiderSpawnHeight: 40
   spiderSpawnRadius: 20
   spiderGameObject: {fileID: 1418408088444850, guid: 3f0a793bad1ca2a42961e90c9e33b389,
     type: 2}
@@ -71,3 +71,4 @@ MonoBehaviour:
   description: An aged giant spider has wondered into Heslington to wreak havoc before
     leaving its enormous carcass for you to deal with. While it may be a good source
     of food, affected tiles will suffer in ore and energy production.
+  eventTime: 10

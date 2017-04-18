@@ -56,9 +56,6 @@ public class canvasScript : MonoBehaviour
     // JBT created this method
     void Update()
     {
-        //tex = Resources.Load<Texture2D>("Textures/gooseIcon");
-        //GameObject.Find("Terrain").GetComponent<Renderer>().material.mainTexture = tex;
-
         if (CurrentPhaseTimeout != null)
         {
             // We are in a timed phase, update the display timer

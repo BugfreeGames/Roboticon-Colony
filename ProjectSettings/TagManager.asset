@@ -7,6 +7,10 @@ TagManager:
   - uiCanvas
   - gameManager
   - mapTile
+  - playGame
+  - credits
+  - quit
+  - back
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,7 @@ TagManager:
   - 
   - 
   - mapTile
-  - 
+  - chancellor
   - 
   - 
   - 

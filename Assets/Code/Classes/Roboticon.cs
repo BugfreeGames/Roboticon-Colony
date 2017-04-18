@@ -69,7 +69,7 @@ public class Roboticon
 
     //Added by JBT
     /// <summary>
-    /// Uninstalled the Roboticon from it's tile
+    /// Uninstalled the Roboticon from its tile
     /// </summary>
     public void UninstallRoboticonFromTile()
     {

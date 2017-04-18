@@ -22,6 +22,13 @@ public class scorpionScript : MonoBehaviour
     private static string ANIM_TRIGGER_BIG_ATTACK = "Big Attack";
     private static string ANIM_TRIGGER_RUN_ATTACK = "Run Attack";
 
+    private static int DESTROY_EVENT_AFTER_SECONDS = 30;
+    private static int MIN_WALK_CYCLES = 1;
+    private static int MAX_WALK_CYCLES = 6;
+    private static float WALK_ANIM_LENGTH = 0.8f;
+    private static ResourceGroup TILE_RESOURCE_EFFECT = new ResourceGroup(-1, 0, 0);
+    private static int TILE_RESOURCE_TURNS = 2;
+
     bool setRunAttackSpeedOnce = false;
 
     // Use this for initialization
@@ -29,6 +36,7 @@ public class scorpionScript : MonoBehaviour
     {
         StartCoroutine(DelayStart());
         gameObject.GetComponent<Animator>().enabled = false;
+        Destroy(transform.parent.gameObject, DESTROY_EVENT_AFTER_SECONDS);
     }
 
     // Update is called once per frame
@@ -69,10 +77,10 @@ public class scorpionScript : MonoBehaviour
 
     private IEnumerator DelayAttack()
     {
-        yield return new WaitForSeconds(Random.Range(1, 6) * 0.8f);
+        yield return new WaitForSeconds(Random.Range(MIN_WALK_CYCLES, MAX_WALK_CYCLES) * WALK_ANIM_LENGTH);
         string triggerToSet;
 
-        switch(Random.Range(0, 3))
+        switch(Random.Range(0, 3))      //33% chance of each attack
         {
             case 0:
                 triggerToSet = ANIM_TRIGGER_BIG_ATTACK;
@@ -85,7 +93,7 @@ public class scorpionScript : MonoBehaviour
             default:
                 triggerToSet = ANIM_TRIGGER_RUN_ATTACK;
 
-                if(Random.Range(0, 2) == 0)
+                if(Random.Range(0, 2) == 0)     //50 percent chance of each attack
                 {
                     GetComponent<Animator>().SetTrigger(ANIM_TRIGGER_GROUND_ATTACK);
                 }
@@ -102,9 +110,7 @@ public class scorpionScript : MonoBehaviour
 
     private IEnumerator DelayStart()
     {
-        print("delaying start");
         yield return new WaitForSeconds(startDelay);
-        print("delayed start");
         gameObject.GetComponent<Animator>().enabled = true;
 
         StartCoroutine(DelayAttack());
@@ -112,10 +118,11 @@ public class scorpionScript : MonoBehaviour
         foreach (BoxCollider collider in hitRegionColliders)
         {
             damagePointScript damageScript = collider.gameObject.AddComponent<damagePointScript>();
-            RandomEventEffect effect = new RandomEventEffect(new ResourceGroup(-5, 0, 0), 2);
+            RandomEventEffect effect = new RandomEventEffect(TILE_RESOURCE_EFFECT, TILE_RESOURCE_TURNS);
             effect.SetVisualEffect(poisonLastingEffect);
             damageScript.SetResourceEffects(effect);
             damageScript.SetHitEffect(poisonHitEffect);
+            damageScript.SetHitDelay(1);
         }
     }
 }

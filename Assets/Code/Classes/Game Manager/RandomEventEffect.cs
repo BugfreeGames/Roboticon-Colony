@@ -13,10 +13,13 @@ public class RandomEventEffect
 
     private GameObject visualEffectInWorld;
 
-    public RandomEventEffect(ResourceGroup effect, int turns)
+    private bool doDestroyRoboticons;
+
+    public RandomEventEffect(ResourceGroup effect, int turns, bool doDestroyRoboticons = false)
     {
         resourceEffects = effect;
         turnsRemaining = turns;
+        this.doDestroyRoboticons = doDestroyRoboticons;
     }
 
     public bool IsFinished()
@@ -27,6 +30,11 @@ public class RandomEventEffect
     public ResourceGroup GetEffects()
     {
         return resourceEffects;
+    }
+
+    public bool DoDestroyRoboticons()
+    {
+        return doDestroyRoboticons;
     }
 
     public void SetVisualEffect(GameObject effect)

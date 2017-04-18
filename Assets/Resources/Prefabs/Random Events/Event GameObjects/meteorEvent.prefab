@@ -460,6 +460,7 @@ MonoBehaviour:
   title: Meteor Strike!
   description: A meteor has fallen onto the campus! It has devastated some tiles,
     but may be a valuable source of ore.
+  eventTime: 5
 --- !u!198 &198303600855026394
 ParticleSystem:
   m_ObjectHideFlags: 1

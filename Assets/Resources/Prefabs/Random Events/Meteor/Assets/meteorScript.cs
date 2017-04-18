@@ -10,12 +10,13 @@ public class meteorScript : MonoBehaviour
     public GameObject meteorDestroyedGameObject;
     public GameObject meteorModelGameObject;
 
-    private ResourceGroup eventEffect = new ResourceGroup(-50,-50, 13);
+    private static ResourceGroup METEOR_STRIKE_EFFECT = new ResourceGroup(-50,-50, 13);
+    private static int METEOR_STRIKE_TURNS = 3;
 
 	// Use this for initialization
 	void Start ()
     {
-        GetComponent<Rigidbody>().AddForce(Random.Range(-500, 500), 0, Random.Range(-500, 500));
+        GetComponent<Rigidbody>().AddForce(Random.Range(-300, 300), 0, Random.Range(-300, 300));
 	}
 	
 	// Update is called once per frame
@@ -46,7 +47,7 @@ public class meteorScript : MonoBehaviour
                 if(collider.tag == TagManager.mapTile)
                 {
                     Tile hitTile = GameHandler.GetGameManager().GetMap().GetTile(collider.GetComponent<mapTileScript>().GetTileId());
-                    RandomEventEffect effect = new RandomEventEffect(eventEffect, 3);
+                    RandomEventEffect effect = new RandomEventEffect(METEOR_STRIKE_EFFECT, METEOR_STRIKE_TURNS);
                     effect.SetVisualEffectInWorld(gameObject);
                     hitTile.ApplyEventEffect(effect);
                 }
@@ -57,7 +58,6 @@ public class meteorScript : MonoBehaviour
             GameObject.Instantiate(meteorDestroyedGameObject, transform.position, Quaternion.identity, transform);
             Destroy(this.GetComponent<SphereCollider>());
             Destroy(this.GetComponent<Rigidbody>());
-            transform.Translate(0, -2, 0);
             Destroy(this);
         }
 	}

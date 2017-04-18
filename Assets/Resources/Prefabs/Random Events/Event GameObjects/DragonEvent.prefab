@@ -5938,6 +5938,7 @@ MonoBehaviour:
   title: Dragon Attack!
   description: A Dragon has been summoned to attack Heslington! Flee for your lives!
     Burning tiles are heavily crippled until the fires can be put out.
+  eventTime: 20
 --- !u!114 &114890569259545192
 MonoBehaviour:
   m_ObjectHideFlags: 1
