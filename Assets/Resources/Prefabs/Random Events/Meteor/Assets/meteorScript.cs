@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// New for Assessment 4 - Script to describe the action of a random event
+/// </summary>
 public class meteorScript : MonoBehaviour
 {
     public float detectRadius = 2.4f;
@@ -16,7 +19,7 @@ public class meteorScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        GetComponent<Rigidbody>().AddForce(Random.Range(-300, 300), 0, Random.Range(-300, 300));
+        GetComponent<Rigidbody>().AddForce(Random.Range(-300, 300), 0, Random.Range(-300, 300));    //Randomises the hit area of the meteor by applying some horizontal force.
 	}
 	
 	// Update is called once per frame

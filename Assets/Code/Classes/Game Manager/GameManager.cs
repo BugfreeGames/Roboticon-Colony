@@ -162,8 +162,8 @@ public class GameManager
             //If we're moving on to the production phase, run the function that handles the logic for the production phase.
             if (currentState == (States.PRODUCTION - 1))
             {
-                ProcessProductionPhase();
-                currentState++;
+                ProcessProductionPhase();   //Assessment 4 - Moved random event logic from here to a separate if statement below this one.
+                currentState++;             
             }
             else if(currentState == States.AUCTIONBID)
             {
@@ -182,9 +182,9 @@ public class GameManager
             currentPlayerIndex = 0;
         }
 
-        if(currentState == States.PRODUCTION)
+        if(currentState == States.PRODUCTION)   //Assessment 4 - Moved random event logic here so that each player has a chance of their own event each turn.
         {
-            RandomEvent newEvent = new RandomEvent(randomEventStore);
+            RandomEvent newEvent = new RandomEvent(randomEventStore);   //Using BugFree's original randomEvent system as implemented in Assessment 2 (Reverted)
             newEvent.Instantiate();
             humanGui.DisplayRandomEventInfo(newEvent);
             ApplyRandomEventTimeout(newEvent.getEventTime());
@@ -238,6 +238,10 @@ public class GameManager
         }
     }
 
+    /// <summary>
+    /// New for Assessment 4 - apply a different timeout for the production phase depending on which random event is playing.
+    /// </summary>
+    /// <param name="randomEventTime"></param>
     private void ApplyRandomEventTimeout(int randomEventTime)
     {
         humanGui.GetCanvas().SetPhaseTimeout(new Timeout(randomEventTime));

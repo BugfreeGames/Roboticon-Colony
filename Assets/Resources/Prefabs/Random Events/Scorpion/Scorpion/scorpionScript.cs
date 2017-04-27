@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// New for Assessment 4 - Script to describe the action of a random event
+/// </summary>
 public class scorpionScript : MonoBehaviour
 {
     public float defaultMoveSpeed = 5;
@@ -22,12 +25,12 @@ public class scorpionScript : MonoBehaviour
     private static string ANIM_TRIGGER_BIG_ATTACK = "Big Attack";
     private static string ANIM_TRIGGER_RUN_ATTACK = "Run Attack";
 
+    private static float WALK_ANIM_LENGTH = 0.8f;
     private static int DESTROY_EVENT_AFTER_SECONDS = 30;
     private static int MIN_WALK_CYCLES = 1;
     private static int MAX_WALK_CYCLES = 6;
-    private static float WALK_ANIM_LENGTH = 0.8f;
-    private static ResourceGroup TILE_RESOURCE_EFFECT = new ResourceGroup(-1, 0, 0);
     private static int TILE_RESOURCE_TURNS = 2;
+    private static ResourceGroup TILE_RESOURCE_EFFECT = new ResourceGroup(-1, 0, 0);
 
     bool setRunAttackSpeedOnce = false;
 
@@ -44,7 +47,7 @@ public class scorpionScript : MonoBehaviour
     {
 		if(moveSpeed > 0)
         {
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.Self);
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.Self);  //Move forwards
         }
 
         CheckAnimationState();
@@ -52,7 +55,7 @@ public class scorpionScript : MonoBehaviour
 
     void CheckAnimationState()
     {
-        string clipName = GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string clipName = GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;      //Get the name of the current clip being played by the Animator.
 
         if(clipName == ANIM_STATE_WALK)
         {
@@ -119,7 +122,7 @@ public class scorpionScript : MonoBehaviour
         {
             damagePointScript damageScript = collider.gameObject.AddComponent<damagePointScript>();
             RandomEventEffect effect = new RandomEventEffect(TILE_RESOURCE_EFFECT, TILE_RESOURCE_TURNS);
-            effect.SetVisualEffect(poisonLastingEffect);
+            effect.SetVisualEffect(poisonLastingEffect);        //Sets the pink poison effect to appear in the game world while the effect is active.
             damageScript.SetResourceEffects(effect);
             damageScript.SetHitEffect(poisonHitEffect);
             damageScript.SetHitDelay(1);

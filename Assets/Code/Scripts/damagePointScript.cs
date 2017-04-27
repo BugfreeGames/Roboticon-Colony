@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Main script used by RandomEvent GameObjects to apply a resource reducing damage to Tile objects.
+/// </summary>
 public class damagePointScript : MonoBehaviour
 {
     RandomEventEffect tileEffect;
@@ -141,11 +144,6 @@ public class damagePointScript : MonoBehaviour
                 StartCoroutine(DelayNextHit());
             }
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-
     }
 
     private IEnumerator DelayNextHit()

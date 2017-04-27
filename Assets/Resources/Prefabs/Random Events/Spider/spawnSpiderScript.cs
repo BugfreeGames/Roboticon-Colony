@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Assessment 4 - Used to describe the behaviour of one of the random events
+/// </summary>
 public class spawnSpiderScript : MonoBehaviour
 {
     public float spiderSpawnHeight = 50;
     public float spiderSpawnRadius = 5;
     public GameObject spiderGameObject;
-
-	// Use this for initialization
+    
 	void Start ()
     {
         float theta = Random.Range(0, 360.0f);

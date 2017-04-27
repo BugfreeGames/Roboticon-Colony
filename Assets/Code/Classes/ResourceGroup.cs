@@ -85,7 +85,7 @@ public class ResourceGroup
     }
 
     /// <summary>
-    /// If this resource group contains any negative resource values, sets them to 0.
+    /// Assessment 4 - If this resource group contains any negative resource values, sets them to 0.
     /// </summary>
     public void RemoveNegativeResources()
     {

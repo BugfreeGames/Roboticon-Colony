@@ -9,9 +9,8 @@ public class handBulletScript : MonoBehaviour
 
     public static ResourceGroup HIT_RESOURCE_EFFECT = new ResourceGroup(-50, -50, -50);
     public static int HIT_TURNS_EFFECT = 0; //0 -> permanent damage to tile
-    public static int bulletLifetime = 15;
-
-	// Use this for initialization
+    public static int bulletLifetime = 15;  //Time in seconds before bullet object is destroyed
+    
 	void Start ()
     {
         damagePointScript damageScript = gameObject.AddComponent<damagePointScript>();
@@ -22,9 +21,8 @@ public class handBulletScript : MonoBehaviour
         Destroy(gameObject, bulletLifetime); //Destroy after timeout in case no tile is hit.
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
-        transform.Translate(Vector3.forward * bulletSpeed * Time.deltaTime, Space.Self);
+        transform.Translate(Vector3.forward * bulletSpeed * Time.deltaTime, Space.Self);    //Move the bullet forward each frame (frame-rate adjusted)
 	}
 }

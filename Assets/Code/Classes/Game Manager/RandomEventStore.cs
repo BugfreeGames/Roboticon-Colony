@@ -5,6 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Assessment 4 - Reverted and built upon random event system to original BugFree system from Assessment 2 
+/// </summary>
 public class RandomEventStore
 {
     private static string randomEventGameObjectsPath = "Prefabs/Random Events/Event GameObjects"; //Assumes all assets in this folder are GameObjects.

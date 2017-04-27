@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// New for Assessment 4 - Script to describe the action of a random event
+/// </summary>
 public class spiderScript : MonoBehaviour
 {
     public float spiderDeathEffectRadius = 10;
@@ -9,17 +12,17 @@ public class spiderScript : MonoBehaviour
     public AudioSource spiderDieAudioSource;
     public List<BoxCollider> legColliderHitPoints = new List<BoxCollider>();
 
-    private static string ANIM_WALK_TRIGGER = "Walk";
     private static string ANIM_ATTACK_TRIGGER = "Attack";
     private static string ANIM_DIE_1_TRIGGER = "Die1";
     private static string ANIM_DIE_2_TRIGGER = "Die2";
+    private static string ANIM_WALK_TRIGGER = "Walk";       //These should match the animation names for the model.
     private static string ANIM_NAME_WALK = "run_ani_vor";
     private static string ANIM_NAME_DIE_1 = "die";
     private static string ANIM_NAME_DIE_2 = "die_2";
 
     private static ResourceGroup TILE_DAMAGE_RESOURCE_EFFECT = new ResourceGroup(-1, -1, -1);
-    private static int TILE_DAMAGE_RESOURCE_TURNS = 3;
     private static ResourceGroup TILE_DEATH_RESOURCE_EFFECT = new ResourceGroup(10, -3, -3);
+    private static int TILE_DAMAGE_RESOURCE_TURNS = 3;
     private static int TILE_DEATH_RESOURCE_TURNS = 3;
 
     private static int MIN_WALK_CYCLES = 1;
@@ -29,10 +32,10 @@ public class spiderScript : MonoBehaviour
 
     Animator animator;
 
-    float walkSpeed = 0;
-    bool doAddDamageScripts = false;
-    bool damageScriptsAdded = false;
-    bool deathEffectApplied = false;
+    private float walkSpeed = 0;
+    private bool doAddDamageScripts = false;
+    private bool damageScriptsAdded = false;
+    private bool deathEffectApplied = false;
 
 	// Use this for initialization
 	void Start ()
@@ -68,7 +71,7 @@ public class spiderScript : MonoBehaviour
 
     private void CheckCurrentAnimStateForAction()
     {
-        string currentClipName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string currentClipName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;       //Gets the name of the current clip beign played by the Animator
 
         if (currentClipName == ANIM_NAME_WALK)
         {
@@ -81,7 +84,7 @@ public class spiderScript : MonoBehaviour
 
         if (!damageScriptsAdded && currentClipName == ANIM_ATTACK_TRIGGER)
         {
-            doAddDamageScripts = true;
+            doAddDamageScripts = true;      //Add the damage scripts do deal damage to tiles when the attack animation is being played.
             GetComponent<AudioSource>().Play();
         }
 
@@ -110,7 +113,7 @@ public class spiderScript : MonoBehaviour
             {
                 Tile tile = GameHandler.GetGameManager().GetMap().GetTile(col.GetComponent<mapTileScript>().GetTileId());
                 RandomEventEffect deathEffect = new RandomEventEffect(TILE_DEATH_RESOURCE_EFFECT, TILE_DEATH_RESOURCE_TURNS);
-                deathEffect.SetVisualEffectInWorld(gameObject);
+                deathEffect.SetVisualEffectInWorld(gameObject);     //Set the visual effect in the game world to this gameobject so that the spider carcass is removed when the event runs out.
                 tile.ApplyEventEffect(deathEffect);
             }
         }

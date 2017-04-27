@@ -14,6 +14,9 @@ public class mainMenuManager : MonoBehaviour
     public GameObject quitBackButton;
     public GameObject creditsBackButton;
 
+    public GameObject quitConfirmButton;
+    public GameObject creditsImg;
+
     private static int LEFT_MOUSE_BUTTON = 0;
     private static float ANIM_LENGTH = 2;
 
@@ -24,6 +27,8 @@ public class mainMenuManager : MonoBehaviour
 
     private Animator cameraAnimator;
 
+    private bool canCheckClick = true;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -33,7 +38,7 @@ public class mainMenuManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if(Input.GetMouseButtonUp(LEFT_MOUSE_BUTTON))
+		if(Input.GetMouseButtonUp(LEFT_MOUSE_BUTTON) && canCheckClick)
         {
             CheckMonitorButtonsClicked();
         }
@@ -46,7 +51,9 @@ public class mainMenuManager : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit))
         {
-            switch(hit.collider.tag)
+            StartCoroutine(DelayNextClick());
+
+            switch (hit.collider.tag)
             {
                 case TagManager.playGame:
                     SwitchToMainMonitor();
@@ -62,6 +69,10 @@ public class mainMenuManager : MonoBehaviour
 
                 case TagManager.back:
                     GoBackToCameraIdle();
+                    break;
+
+                case TagManager.confirmQuit:
+                    Application.Quit();
                     break;
             }
         }
@@ -80,6 +91,7 @@ public class mainMenuManager : MonoBehaviour
         cameraAnimator.SetTrigger(ANIM_RIGHT_MONITOR);
         creditsButton.SetActive(false);
         creditsBackButton.SetActive(true);
+        creditsImg.SetActive(true);
     }
 
     private void SwitchToQuitMonitor()
@@ -87,6 +99,7 @@ public class mainMenuManager : MonoBehaviour
         cameraAnimator.SetTrigger(ANIM_LEFT_MONITOR);
         quitButton.SetActive(false);
         quitBackButton.SetActive(true);
+        quitConfirmButton.SetActive(true);
     }
 
     private void GoBackToCameraIdle()
@@ -101,11 +114,21 @@ public class mainMenuManager : MonoBehaviour
         quitBackButton.SetActive(false);
         creditsBackButton.SetActive(false);
         guiCanvas.SetActive(false);
+
+        creditsImg.SetActive(false);
+        quitConfirmButton.SetActive(false);
     }
 
     private IEnumerator DelayShowMainMonitor()
     {
         yield return new WaitForSeconds(ANIM_LENGTH);
         guiCanvas.SetActive(true);
+    }
+
+    private IEnumerator DelayNextClick()
+    {
+        canCheckClick = false;
+        yield return new WaitForSeconds(ANIM_LENGTH);
+        canCheckClick = true;
     }
 }

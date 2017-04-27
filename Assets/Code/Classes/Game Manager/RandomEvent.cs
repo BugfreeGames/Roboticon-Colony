@@ -3,6 +3,9 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Assessment 4 - Reverted and built upon original BugFree RandomEvent system from Assessment 2.
+/// </summary>
 public class RandomEvent
 {
     private GameObject eventGameObject;
@@ -10,8 +13,14 @@ public class RandomEvent
     private string eventDescription;
     private int eventTime;
 
+    private static int DEFAULT_TIMEOUT_NO_EVENT = 3;
+
     public bool isNullEvent = false;
 
+    /// <summary>
+    /// Create a new RandomEvent. May create a null event depending on the probabilities in RandomEventStore.
+    /// </summary>
+    /// <param name="randomEventStore"></param>
     public RandomEvent(RandomEventStore randomEventStore)
     {
         eventGameObject = new RandomEventFactory().Create(randomEventStore);
@@ -30,6 +39,9 @@ public class RandomEvent
         }
     }
 
+    /// <summary>
+    /// Instantiate the random event in the game world.
+    /// </summary>
     public void Instantiate()
     {
         if(isNullEvent)
@@ -64,7 +76,7 @@ public class RandomEvent
     {
         if(isNullEvent)
         {
-            return 3;
+            return DEFAULT_TIMEOUT_NO_EVENT;   
         }
 
         return eventTime;

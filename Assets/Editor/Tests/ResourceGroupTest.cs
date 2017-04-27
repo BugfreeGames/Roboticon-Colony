@@ -20,13 +20,6 @@ public class ResourceGroupTest
     }
 
     [Test]
-    public void NegativeCreationTest()
-    {
-        ResourceGroup r;
-        Assert.Throws<System.ArgumentException>(()=>  r = new ResourceGroup(5, -1, 2));
-    }
-
-    [Test]
     public void EqualityTest()
     {
         Assert.AreEqual(new ResourceGroup(25, 25, 25), TestGroup3);

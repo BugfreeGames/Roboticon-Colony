@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// New for Assessment 4 - Script to describe the action of a random event
+/// </summary>
 public class godzillaScript : MonoBehaviour
 {
     public GameObject hitEffect;
@@ -14,16 +17,15 @@ public class godzillaScript : MonoBehaviour
 
     private static string TRIGGER_BREAK_THINGS = "breakThings";
     private static string TRIGGER_WALK = "startWalking";
-    private static float WALK_ANIM_LENGTH = 3.25f;
+    private static float WALK_ANIM_LENGTH = 3.25f;      //ANIM_LENGTH s should match the length in seconds of the animation clips used.
     private static float BREAK_THINGS_ANIM_LENGTH = 22.3f;
     private static int MIN_WALK_CYCLES = 2;
     private static int MAX_WALK_CYCLES = 3;
-    private static int WALK_AWAY_TIMEOUT = 15;
+    private static int WALK_AWAY_TIMEOUT = 15;          //Time after which to destroy Godzilla after it starts walking away
     private static ResourceGroup tileHitEffect = new ResourceGroup(-1, -1, -1);
 
     private bool breakingThings = false;
-
-	// Use this for initialization
+    
 	void Start ()
     {
         foreach (BoxCollider collider in damagePointColliders)
@@ -38,7 +40,6 @@ public class godzillaScript : MonoBehaviour
         StartCoroutine(DelayBreakThings());
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         if (breakingThings)
@@ -52,12 +53,12 @@ public class godzillaScript : MonoBehaviour
             }
         }
 
-        transform.Translate(new Vector3(0, 0, -walkSpeed * Time.deltaTime), Space.Self);
+        transform.Translate(new Vector3(0, 0, -walkSpeed * Time.deltaTime), Space.Self);    //Walk forwards
 	}
 
     private IEnumerator DelayBreakThings()
     {
-        yield return new WaitForSeconds(Random.Range(MIN_WALK_CYCLES, MAX_WALK_CYCLES) * WALK_ANIM_LENGTH);
+        yield return new WaitForSeconds(Random.Range(MIN_WALK_CYCLES, MAX_WALK_CYCLES) * WALK_ANIM_LENGTH); //Pick a random amount of walk cycles to perform before beginning the breakThings animation
         breakingThings = true;
         GetComponent<Animator>().SetTrigger(TRIGGER_BREAK_THINGS);
         GetComponent<AudioSource>().PlayDelayed(WALK_ANIM_LENGTH);

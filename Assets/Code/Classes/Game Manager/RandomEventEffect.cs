@@ -9,9 +9,9 @@ public class RandomEventEffect
 {
     private ResourceGroup resourceEffects;
     private int turnsRemaining;
-    private GameObject perpetualVisualEffect;   //Optional effect to play while this RandomEventEffect is active.
 
-    private GameObject visualEffectInWorld;
+    private GameObject perpetualVisualEffect;   //Optional effect to play while this RandomEventEffect is active.
+    private GameObject visualEffectInWorld;     //This GameObject will be removed when the effect times out if it is set.
 
     private bool doDestroyRoboticons;
 
@@ -69,6 +69,9 @@ public class RandomEventEffect
         }
     }
 
+    /// <summary>
+    /// Call every turn to decrement turns remaining on this effect.
+    /// </summary>
     public void Tick()
     {
         turnsRemaining--;

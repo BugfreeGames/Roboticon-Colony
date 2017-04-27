@@ -39,6 +39,10 @@ public class TileObject
         return this.position;
     }
 
+    /// <summary>
+    /// Assessment 4:- Gives the position of the centre of this TileObject in the game world.
+    /// </summary>
+    /// <returns></returns>
     public Vector3 GetTileWorldPosition()
     {
         return tileGameObjectInScene.transform.position;

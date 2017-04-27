@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Assessment 4 - Used to describe the behaviour of one of the random events
+/// </summary>
 public class spawnGodzillaScript : MonoBehaviour
 {
     public GameObject godzillaGameObject;

@@ -55,6 +55,10 @@ public class Map
         return numTiles;
     }
 
+    /// <summary>
+    /// Assessment 4:- Calls the Tick function on all RandomEvents currently applied to all Tiles in the Map
+    /// Call every turn for proper behaviour.
+    /// </summary>
     public void TickAllTileEventEffects()
     {
         foreach (Tile tile in tiles)

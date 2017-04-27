@@ -312,6 +312,11 @@ public class HumanGui
         canvas.ShowTileInfoWindow(tile);
     }
 
+    public void RefreshTileInfoWindow()
+    {
+        canvas.RefreshTileInfoWindow();
+    }
+
     /// <summary>
     /// Gets the reference to the current selected tile in the UI
     /// </summary>

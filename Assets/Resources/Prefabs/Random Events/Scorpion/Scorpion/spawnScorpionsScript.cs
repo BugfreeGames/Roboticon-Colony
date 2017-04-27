@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// New for Assessment 4 - Script to describe the action of a random event
+/// </summary>
 public class spawnScorpionsScript : MonoBehaviour
 {
     public float minSize = 0.5f;

@@ -696,7 +696,7 @@ public class canvasScript : MonoBehaviour
         return "(" + sign + changeAmount.ToString() + ")";
     }
 
-    //Added by JBT 
+    //Added by JBT :// Assessment 4, Fixed by BugFree :- Actually returns to the main menu now.
     /// <summary>
     /// Quits the game and returns to the main menu
     /// Loses all player progress
@@ -707,6 +707,7 @@ public class canvasScript : MonoBehaviour
         Destroy(GameObject.Find("GameManager"));
         Destroy(GameObject.Find("Tile Holder"));
         Destroy(GameObject.Find("Map Manager"));
+        Destroy(gameObject, Time.deltaTime);
 
         //Go to the main menu
         SceneManager.LoadScene(0);
