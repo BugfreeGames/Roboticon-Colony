@@ -1,4 +1,4 @@
-﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using UnityEngine;
 using System.Collections.Generic;
@@ -357,7 +357,15 @@ public class HumanGui
             //Added by JBT - only install a roboticon to a tile if the roboticon is not already installed to a tile
             if (!roboticon.IsInstalledToTile())
             {
-                currentHuman.InstallRoboticon(roboticon, currentSelectedTile);
+                try
+                {
+                    currentHuman.InstallRoboticon(roboticon, currentSelectedTile);
+                }
+                catch (System.InvalidOperationException)
+                {
+                    throw new System.InvalidOperationException("Tried to install a roboticon to a tile which already has a roboticon");
+                }
+
                 canvas.RefreshTileInfoWindow();
             }
             else
@@ -367,7 +375,7 @@ public class HumanGui
         }
         else
         {
-            throw new System.InvalidOperationException("Tried to install roboticon to tile which is not owned by the current player. This should not happen.");
+            throw new System.InvalidOperationException("Tried to install roboticon to tile which is not owned by the current player. This should not happen");
         }
     }
 
@@ -380,7 +388,15 @@ public class HumanGui
     {
         if(roboticon.IsInstalledToTile())
         {
-            currentHuman.UninstallRoboticon(roboticon, roboticon.InstalledTile);
+            try
+            {
+                currentHuman.UninstallRoboticon(roboticon.InstalledTile);
+            }
+            catch (System.InvalidOperationException)
+            {
+                throw new System.InvalidOperationException("Tried to uninstall a roboticon from a tile which has no roboticon");
+            }
+
             canvas.RefreshTileInfoWindow();
         }
         else

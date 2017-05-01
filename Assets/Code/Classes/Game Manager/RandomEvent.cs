@@ -1,4 +1,4 @@
-﻿// Game Executable hosted at: http://www-users.york.ac.uk/~jwa509/alpha01BugFree.exe
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using UnityEngine;
 using System.Collections;
@@ -12,6 +12,7 @@ public class RandomEvent
     private string eventTitle;
     private string eventDescription;
     private int eventTime;
+    private Sprite eventImage;
 
     private static int DEFAULT_TIMEOUT_NO_EVENT = 3;
 
@@ -31,6 +32,7 @@ public class RandomEvent
 
             eventTitle = eventInfo.title;
             eventDescription = eventInfo.description;
+            eventImage = eventInfo.image;
             eventTime = eventInfo.eventTime;
         }
         else
@@ -80,5 +82,15 @@ public class RandomEvent
         }
 
         return eventTime;
+    }
+
+    public Sprite getImage()
+    {
+        if(isNullEvent)
+        {
+            return new Sprite();
+        }
+
+        return eventImage;
     }
 }

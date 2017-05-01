@@ -72,3 +72,4 @@ MonoBehaviour:
     leaving its enormous carcass for you to deal with. While it may be a good source
     of food, affected tiles will suffer in ore and energy production.
   eventTime: 10
+  image: {fileID: 21300000, guid: 8a7f60e8dd421614696606a28954c1a9, type: 3}

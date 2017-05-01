@@ -18,7 +18,7 @@ public class Roboticon
     public Roboticon()
     {
         this.name = "RBN#" + (++TotalRoboticons).ToString("0000");
-        this.upgrades = new ResourceGroup(0,0,0);
+        this.upgrades = new ResourceGroup(1,1,1);
     }
 
     public Roboticon(ResourceGroup upgrades, string name = "")

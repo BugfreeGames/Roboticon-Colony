@@ -461,6 +461,7 @@ MonoBehaviour:
   description: A meteor has fallen onto the campus! It has devastated some tiles,
     but may be a valuable source of ore.
   eventTime: 5
+  image: {fileID: 21300000, guid: 2848daa4bcd5fb74fa6bae8f652b0af0, type: 3}
 --- !u!198 &198303600855026394
 ParticleSystem:
   m_ObjectHideFlags: 1

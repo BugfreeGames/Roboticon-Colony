@@ -29,8 +29,8 @@ public class TileTest {
         Tile tile = new Tile(new ResourceGroup(10, 10, 10), new Vector2(3, 3), 7);
         Roboticon r = new Roboticon();
         tile.InstallRoboticonTest(r);
-        tile.UninstallRoboticonTest(r);
-        Assert.Throws<System.InvalidOperationException>(() => tile.UninstallRoboticon(r));
+        tile.UninstallRoboticonTest();
+        Assert.Throws<System.InvalidOperationException>(() => tile.UninstallRoboticon());
     }
 
     [Test]
@@ -50,7 +50,7 @@ public class TileTest {
         tile.InstallRoboticonTest(r);
 
         ResourceGroup resources = tile.GetTotalResourcesGenerated();
-        ResourceGroup actualResources = tile.GetBaseResourcesGenerated() + tile.GetInstalledRoboticons()[0].GetUpgrades() * Tile.ROBOTICON_UPGRADE_WEIGHT;
+        ResourceGroup actualResources = tile.GetBaseResourcesGenerated() + tile.GetInstalledRoboticon().GetUpgrades() * Tile.ROBOTICON_UPGRADE_WEIGHT;
 
         Assert.AreEqual(resources, actualResources);
     }

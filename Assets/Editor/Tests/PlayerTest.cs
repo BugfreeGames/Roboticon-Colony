@@ -61,7 +61,7 @@ public class PlayerTest {
         testHuman.AcquireRoboticon(r);
         InstallRoboticon(r, t);
 
-        Assert.AreEqual(testHuman.GetOwnedTiles()[0].GetInstalledRoboticons()[0], r);
+        Assert.AreEqual(testHuman.GetOwnedTiles()[0].GetInstalledRoboticon(), r);
     }
 
     [Test]

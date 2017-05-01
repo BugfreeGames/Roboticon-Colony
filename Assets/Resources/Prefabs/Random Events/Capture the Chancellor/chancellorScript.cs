@@ -104,7 +104,16 @@ public class chancellorScript : MonoBehaviour
 
     private void CheckAnimationState()
     {
-        string currentState = GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;  //Gets the name of the current clip being played by the Animator.
+        string currentState;
+
+        try
+        {
+            currentState = GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;  //Gets the name of the current clip being played by the Animator.
+        }
+        catch (System.IndexOutOfRangeException)
+        {
+            return;
+        }
 
         if(currentState == ANIM_STATE_RUNNING)
         {

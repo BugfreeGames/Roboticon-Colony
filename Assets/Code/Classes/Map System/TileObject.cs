@@ -1,4 +1,4 @@
-//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using UnityEngine;
 
@@ -22,8 +22,10 @@ public class TileObject
 
     private GameObject tileGameObjectInScene;
     private GameObject tileCenter;              //Added by JBT to allow the entire tile area to be highlighted
-    private GameObject tileRoboticon;           //Added by JBT to allow the display of installed roboticons on tiles
-    private GameObject tileEventDisplay;        //Added by JBT to allow the display of any events happening on tiles
+    private GameObject tileRoboticon;           //Assessment 4:- changed this variable to instead keep track of the 3D model of the roboticon.
+
+    private GameObject roboticonModel;
+    private static string ROBOTICON_MODEL_PATH = "Prefabs/Roboticons/foodRoboticon";
 
     public TileObject(int id, Vector2 position, Vector2 dimensions)
     {
@@ -32,6 +34,7 @@ public class TileObject
         this.position = position;
         this.size = dimensions;
         this.tileId = id;
+        roboticonModel = (GameObject)Resources.Load(ROBOTICON_MODEL_PATH);
     }
 
     public Vector2 GetTilePosition()
@@ -68,7 +71,7 @@ public class TileObject
             MonoBehaviour.DontDestroyOnLoad(tileHolder);
         }
 
-        Vector3 tilePositionInScene = new Vector3(position.x * size.x * (tileGridPrefabSize.x + 0.1f), 0, position.y * size.y * (tileGridPrefabSize.z + 0.1f));
+        Vector3 tilePositionInScene = new Vector3(position.x * size.x * (tileGridPrefabSize.x), 0, position.y * size.y * (tileGridPrefabSize.z));
         tilePositionInScene += mapCenterPosition;
         tileGameObjectInScene = (GameObject)GameObject.Instantiate(TILE_GRID_GAMEOBJECT, tilePositionInScene, Quaternion.identity);
         MonoBehaviour.DontDestroyOnLoad(tileGameObjectInScene);             //Instantiated in the main menu scene and carried over into the game scene.
@@ -83,11 +86,7 @@ public class TileObject
         tileGameObjectInScene.AddComponent<mapTileScript>().SetTileId(tileId);
         tileGameObjectInScene.transform.parent = tileHolder.transform;
         tileCenter = tileGameObjectInScene.transform.GetChild(0).gameObject;
-        tileRoboticon = tileGameObjectInScene.transform.GetChild(1).gameObject;
-        tileEventDisplay = tileGameObjectInScene.transform.GetChild(2).gameObject;
         tileCenter.SetActive(false);
-        tileRoboticon.SetActive(false);
-        tileEventDisplay.SetActive(false);
     }
 
     //JBT changed this method to support a highlightable center of the tile
@@ -137,27 +136,6 @@ public class TileObject
             {
                 tileCenter.SetActive(false);
             }
-
-            /*
-
-            switch (ownerType)
-            {
-                case TILE_OWNER_TYPE.CURRENT_PLAYER:
-                    tileGameObjectInScene.GetComponent<MeshRenderer>().material.color = TILE_DEFAULT_OWNED;
-                    tileCenter.SetActive(true);
-                    tileCenter.GetComponent<MeshRenderer>().material.color = GetTransparentColor(TILE_DEFAULT_OWNED, TILE_HIGHLIGHT_ALPHA);
-                    break;
-                case TILE_OWNER_TYPE.ENEMY:
-                    tileGameObjectInScene.GetComponent<MeshRenderer>().material.color = TILE_DEFAULT_ENEMY;
-                    tileCenter.SetActive(true);
-                    tileCenter.GetComponent<MeshRenderer>().material.color = GetTransparentColor(TILE_DEFAULT_ENEMY, TILE_HIGHLIGHT_ALPHA);
-                    break;
-                case TILE_OWNER_TYPE.UNOWNED:
-                    tileGameObjectInScene.GetComponent<MeshRenderer>().material.color = TILE_DEFAULT_COLOUR;
-                    tileCenter.SetActive(false);
-                    break;
-            }
-            */
         }
     }
 
@@ -181,7 +159,8 @@ public class TileObject
     /// </summary>
     public void ShowInstalledRoboticon()
     {
-        tileRoboticon.SetActive(true);
+        Quaternion roboticonRotation = Quaternion.Euler(0, Random.Range(0, 360.0f), 0);
+        tileRoboticon = (GameObject)GameObject.Instantiate(roboticonModel, tileCenter.transform.position, roboticonRotation);
     }
 
     //Added by JBT to support the display of installed roboticons on tiles
@@ -190,7 +169,7 @@ public class TileObject
     /// </summary>
     public void HideInstalledRoboticon()
     {
-        tileRoboticon.SetActive(false);
+        MonoBehaviour.Destroy(tileRoboticon);
     }
 
     /// <summary>
@@ -203,34 +182,5 @@ public class TileObject
             TILE_GRID_GAMEOBJECT = (GameObject)Resources.Load(TILE_GRID_PREFAB_PATH);
             tileGridPrefabSize = TILE_GRID_GAMEOBJECT.GetComponent<Renderer>().bounds.size;
         }
-    }
-
-    //Created by JBT
-    /// <summary>
-    /// Set the tiles event icon and display it
-    /// </summary>
-    /// <param name="icon">The path of the texture to display</param>
-    public void SetEventIcon(string iconPath)
-    {
-        tileEventDisplay.SetActive(true);
-        tileEventDisplay.GetComponent<Renderer>().material.mainTexture = Resources.Load<Texture2D>(iconPath);
-    }
-
-    //Created by JBT
-    /// <summary>
-    /// Remove the random event display from a tile
-    /// </summary>
-    public void RemoveEventIcon()
-    {
-        tileEventDisplay.SetActive(false);
-    }
-
-    // created by jbt
-    /// <summary>
-    /// hide the event image 
-    /// </summary>
-    public void DisableEventImage()
-    {
-        tileEventDisplay.SetActive(false);
     }
 }

@@ -1,4 +1,4 @@
-﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -161,7 +161,15 @@ public abstract class Player : Agent
     /// <param name="tile">The tile to install the roboticon to</param>
     public void InstallRoboticon(Roboticon roboticon, Tile tile)
     {
-        tile.InstallRoboticon(roboticon);
+        try
+        {
+            tile.InstallRoboticon(roboticon);
+        }
+        catch (System.InvalidOperationException)
+        {
+            throw new System.InvalidOperationException("Tried to install a roboticon to a tile which already has a roboticon installed.");
+        }
+
         roboticon.InstallRoboticonToTile(tile);
     }
 
@@ -171,10 +179,18 @@ public abstract class Player : Agent
     /// </summary>
     /// <param name="roboticon">The roboticon to uninstall</param>
     /// <param name="tile">The tile to uninstall the roboticon from</param>
-    public void UninstallRoboticon(Roboticon roboticon, Tile tile)
+    public void UninstallRoboticon(Tile tile)
     {
-        tile.UninstallRoboticon(roboticon);
-        roboticon.UninstallRoboticonFromTile();
+        tile.GetInstalledRoboticon().UninstallRoboticonFromTile();
+
+        try
+        {
+            tile.UninstallRoboticon();
+        }
+        catch (System.InvalidOperationException)
+        {
+            throw new System.InvalidOperationException("Tried to uninstall a roboticon to a tile which has no roboticons installed.");
+        }
     }
 
     /// <summary>

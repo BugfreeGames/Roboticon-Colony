@@ -1,4 +1,4 @@
-﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 /// <summary>
 /// The base class for all player types and market.

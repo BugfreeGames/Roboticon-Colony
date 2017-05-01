@@ -1,4 +1,4 @@
-﻿// Game Executable hosted at: http://www-users.york.ac.uk/~jwa509/alpha01BugFree.exe
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using System;
 using System.Collections;

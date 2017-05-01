@@ -1,4 +1,4 @@
-﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,8 +7,8 @@ using UnityEngine.UI;
 /// <summary>
 /// Handles UI related to the gambling window
 /// </summary>
-public class gamblingScript : MonoBehaviour {
-
+public class gamblingScript : MonoBehaviour
+{
     public Text marketBalance;
     public Text resultText;
 
@@ -44,7 +44,7 @@ public class gamblingScript : MonoBehaviour {
             bool won = market.DoubleOrNothing(amount, 0, 100, out valueRolled);
 
             //Display the result to the player
-            SetResultText("You rolled: " + valueRolled.ToString() + "\n" + (won ? "You won £" + (amount * 2).ToString() + "!" : "You Lose!"), won);
+            SetResultText((won ? "You won £" + (amount * 2).ToString() + "!" : "You Lose!"), won);
 
             //If the player has won, add the won money to the player.
             if (won)
@@ -83,7 +83,7 @@ public class gamblingScript : MonoBehaviour {
     /// </summary>
     public void RefreshMarketBalance()
     {
-        marketBalance.text = "Market has £" + market.GetMoney();
+        marketBalance.text = "£" + market.GetMoney();
     }
 
     /// <summary>

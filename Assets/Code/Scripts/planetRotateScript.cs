@@ -1,6 +1,11 @@
-﻿using UnityEngine;
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
+
+using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Assessment 4:- Rotates the planet in the main menu
+/// </summary>
 public class planetRotateScript : MonoBehaviour 
 {
     public float speed = 1;

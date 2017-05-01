@@ -1,4 +1,4 @@
-﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using UnityEngine;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System;
 public class Map
 {
     public static Vector2 MAP_DIMENSIONS = new Vector2(10,10);
-    public static Vector3 MAP_POSITION = new Vector3(-12, 1, -12);
+    public static Vector3 MAP_POSITION = new Vector3(-12, 1, -10);
 
     private List<Tile> tiles = new List<Tile>();
     private const int MAX_TILE_RESOURCE_PRODUCTION = 10;

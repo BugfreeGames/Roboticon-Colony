@@ -1,4 +1,4 @@
-﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,6 +33,7 @@ public class canvasScript : MonoBehaviour
     public roboticonUpgradesWindowScript roboticonUpgradesWindow;
     public Text NewEventTitle; //JBT Title of event displayed to user
     public Text NewEventDescription; //JBT Description of event displayed to user
+    public Image NewEventImage; //Assessment 4:- Flavour image associated with the event.
     public GameObject NewEventMessage; //JBT UI element displayed when a new event is started.
     private Timeout CurrentPhaseTimeout; //JBT used to limit phase durations
     private Timeout EventMessageTimeout; //JBT used to display the new event message for a few seconds
@@ -106,6 +107,7 @@ public class canvasScript : MonoBehaviour
     {
         NewEventTitle.text = newEvent.getTitle();
         NewEventDescription.text = newEvent.getDescription();
+        NewEventImage.sprite = newEvent.getImage();
         NewEventMessage.SetActive(true);
         EventMessageTimeout = new Timeout(8);
     }
@@ -594,7 +596,14 @@ public class canvasScript : MonoBehaviour
     /// <param name="roboticon">The selected robotcion</param>
     public void InstallRoboticon(Roboticon roboticon)
     {
-        humanGui.InstallRoboticon(roboticon);
+        try
+        {
+            humanGui.InstallRoboticon(roboticon);
+        }
+        catch (System.InvalidOperationException)
+        {
+
+        }
     }
 
     //Added by JBT 
@@ -604,7 +613,14 @@ public class canvasScript : MonoBehaviour
     /// <param name="roboticon">The selected roboticon</param>
     public void UninstallRoboticon(Roboticon roboticon)
     {
-        humanGui.UninstallRoboticon(roboticon);
+        try
+        {
+            humanGui.UninstallRoboticon(roboticon);
+        }
+        catch (System.InvalidOperationException)
+        {
+
+        }
     }
 
     public void SetCurrentPlayerName(string name)

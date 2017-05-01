@@ -1,10 +1,15 @@
-﻿using System.Collections;
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Assessment 4:- Handles the new 3D menu and animations associated with it.
+/// </summary>
 public class mainMenuManager : MonoBehaviour
 {
-    public GameObject guiCanvas;
+    public mainMenuScript mainMenuScript;
 
     public GameObject playGameButton;
     public GameObject quitButton;
@@ -17,13 +22,20 @@ public class mainMenuManager : MonoBehaviour
     public GameObject quitConfirmButton;
     public GameObject creditsImg;
 
+    public GameObject shipGameObject;
+    public GameObject fadeToBlackGameObject;
+
+    public static float SHIP_ANIM_LENGTH = 7f;
+    public static float FADE_TO_BLACK_AFTER_SECONDS = 4.7f;
+    public static float CAMERA_ANIM_LENGTH = 2;
+
     private static int LEFT_MOUSE_BUTTON = 0;
-    private static float ANIM_LENGTH = 2;
 
     private static string ANIM_LEFT_MONITOR = "LookAtLeftMonitor";
     private static string ANIM_RIGHT_MONITOR = "LookAtRightMonitor";
     private static string ANIM_IDLE = "BackToIdle";
     private static string ANIM_MAIN_MONITOR = "LookAtMainMonitor";
+    private static string ANIM_SHIP_FLY = "fly";
 
     private Animator cameraAnimator;
 
@@ -43,6 +55,14 @@ public class mainMenuManager : MonoBehaviour
             CheckMonitorButtonsClicked();
         }
 	}
+
+    public void PlayShipLandAnimation()
+    {
+        canCheckClick = false;
+
+        GoBackToCameraIdle();
+        StartCoroutine(DelayShipFlyAnimation());
+    }
 
     private void CheckMonitorButtonsClicked()
     {
@@ -113,7 +133,7 @@ public class mainMenuManager : MonoBehaviour
         playBackButton.SetActive(false);
         quitBackButton.SetActive(false);
         creditsBackButton.SetActive(false);
-        guiCanvas.SetActive(false);
+        mainMenuScript.HideMenu();
 
         creditsImg.SetActive(false);
         quitConfirmButton.SetActive(false);
@@ -121,14 +141,27 @@ public class mainMenuManager : MonoBehaviour
 
     private IEnumerator DelayShowMainMonitor()
     {
-        yield return new WaitForSeconds(ANIM_LENGTH);
-        guiCanvas.SetActive(true);
+        yield return new WaitForSeconds(CAMERA_ANIM_LENGTH);
+        mainMenuScript.ShowMenu();
     }
 
     private IEnumerator DelayNextClick()
     {
         canCheckClick = false;
-        yield return new WaitForSeconds(ANIM_LENGTH);
+        yield return new WaitForSeconds(CAMERA_ANIM_LENGTH);
         canCheckClick = true;
+    }
+
+    private IEnumerator DelayShipFlyAnimation()
+    {
+        yield return new WaitForSeconds(CAMERA_ANIM_LENGTH);
+        shipGameObject.GetComponent<Animator>().SetTrigger(ANIM_SHIP_FLY);
+        StartCoroutine(DelayFadeToBlackStart());
+    }
+
+    private IEnumerator DelayFadeToBlackStart()
+    {
+        yield return new WaitForSeconds(FADE_TO_BLACK_AFTER_SECONDS);
+        fadeToBlackGameObject.GetComponent<fadeToBlackScript>().BeginFadeToBlack();        
     }
 }

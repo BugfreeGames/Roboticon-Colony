@@ -1,8 +1,9 @@
-﻿//Game executable hosted by JBT at: http://robins.tech/jbt/documents/assthree/GameExecutable.zip
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
 
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 //Made by JBT
@@ -11,6 +12,9 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class mainMenuScript : MonoBehaviour
 {
+    public const int GAME_SCENE_INDEX = 1;
+
+    public mainMenuManager menuManager;
     public Toggle player2aiToggle;
     public Toggle player3aiToggle;
     public Toggle player4aiToggle;
@@ -18,15 +22,20 @@ public class mainMenuScript : MonoBehaviour
     public InputField player2Name;
     public InputField player3Name;
     public InputField player4Name;
-    private List<setupPlayer> setupPlayers;
-    public GameObject eventSystem;
-    public const int GAME_SCENE_INDEX = 1;
-    public string gameName = "game";
 
+    public GameObject eventSystem;
     public GameObject addPlayerButton;
     public GameObject removePlayerButton;
-    private int numPlayersShown = 2;
+    public GameObject guiAssets;
 
+    public string gameName = "game";
+    private int numPlayersShown = 2;
+    private List<setupPlayer> setupPlayers;
+    private List<Player> players;
+
+    /// <summary>
+    /// Assessment 4:- Added setupPlayer to simplify creation of multiple players for the 4 player requirement.
+    /// </summary>
     private struct setupPlayer
     {
         InputField nameField;
@@ -121,11 +130,39 @@ public class mainMenuScript : MonoBehaviour
     }
 
     /// <summary>
-    /// Starts the game by creating a new gamehandler
+    /// Assessment 4:- Called when the play button is clicked
+    /// Changed to go through this function to allow for an animation prior to starting the game
     /// </summary>
-    public void StartGame()
+    public void PlayButtonClicked()
     {
-        List<Player> players = new List<Player>();
+        CreatePlayerList();
+        StartCoroutine(DelayStartGame());
+        menuManager.PlayShipLandAnimation();
+    }
+
+    /// <summary>
+    /// Assessment 4:- Added this to hide the menu until the play button has been clicked in the 3D menu.
+    /// </summary>
+    public void HideMenu()
+    {
+        guiAssets.SetActive(false);
+    }
+
+    /// <summary>
+    /// Assessment 4:- Added this to show the menu when the play button has been clicked in the 3D menu.
+    /// </summary>
+    public void ShowMenu()
+    {
+        guiAssets.SetActive(true);
+    }
+
+    /// <summary>
+    /// Assessment 4:- Moved code from StartGame into this function so that player list may be 
+    /// generated before the pre-game animation plays 
+    /// </summary>
+    public void CreatePlayerList()
+    {
+        players = new List<Player>();
 
         foreach (setupPlayer player in setupPlayers)
         {
@@ -133,7 +170,7 @@ public class mainMenuScript : MonoBehaviour
             player.setNameToDefaultIfNoNameSet();
 
             //If the current player is disabled, don't add it to the players list and break as all future players must also be disabled.
-            if(player.isDisabled())
+            if (player.isDisabled())
             {
                 break;
             }
@@ -152,7 +189,13 @@ public class mainMenuScript : MonoBehaviour
                 players.Add(human);
             }
         }
+    }
 
+    /// <summary>
+    /// Starts the game by creating a new gamehandler
+    /// </summary>
+    public void StartGame()
+    {
         Destroy(eventSystem);
 
         GameHandler.CreateNew(gameName, players);
@@ -215,5 +258,14 @@ public class mainMenuScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    /// <summary>
+    /// Assessment 4:- Delays the start of the game to allow the pre-game animation to play
+    /// </summary>
+    private IEnumerator DelayStartGame()
+    {
+        yield return new WaitForSeconds(mainMenuManager.SHIP_ANIM_LENGTH + mainMenuManager.CAMERA_ANIM_LENGTH);
+        StartGame();
     }
 }

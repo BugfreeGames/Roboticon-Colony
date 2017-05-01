@@ -1,16 +1,18 @@
-﻿using System.Collections;
+﻿//Game executable hosted at: http://www-users.york.ac.uk/~jwa509/executable.exe
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Main script used by RandomEvent GameObjects to apply a resource reducing damage to Tile objects.
+/// Assessment 4:- Main script used by RandomEvent GameObjects to apply a resource reducing damage to Tile objects.
 /// </summary>
 public class damagePointScript : MonoBehaviour
 {
     RandomEventEffect tileEffect;
     Collider damagePointCollider;
     GameObject hitEffect;
-    float delayBetweenHits = 0.8f;
+    float delayBetweenHits = 0.8f;      //Time allowed between two successive hits
     float hitStartDelay = 0;
 
     bool readyToHit = true;
@@ -31,7 +33,7 @@ public class damagePointScript : MonoBehaviour
 
         if(hitStartDelay > 0)
         {
-            StartCoroutine(SetColliderActiveAfterDelay());
+            StartCoroutine(SetColliderActiveAfterDelay());      //Start after a delay if one has been set
             damagePointCollider.enabled = false;
         }
         else
@@ -39,12 +41,6 @@ public class damagePointScript : MonoBehaviour
             damagePointCollider.enabled = true;
         }
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-
-	}
 
     /// <summary>
     /// This is the effect that will be added to each tile within the hit collider at every hit.

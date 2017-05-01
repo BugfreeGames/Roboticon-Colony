@@ -4367,6 +4367,7 @@ MonoBehaviour:
   maxTurnSpeed: 100
   timeBetweenClicks: 1
   timeToCapture: 20
+  phaseTimerAfterCapture: 3
   hitEffect: {fileID: 1607956147789632, guid: c6795881bc355cb48a38eb6610bb6925, type: 2}
   hitRegion: {fileID: 65908138655924098}
 --- !u!114 &114936953377815388
@@ -4384,6 +4385,7 @@ MonoBehaviour:
   description: 'Genetics Experiment #878 Codename: "The Chancellor" has escaped confinement.
     Click on it to capture it for a reward!'
   eventTime: 23
+  image: {fileID: 21300000, guid: bfeb603deb7664a43bdee59564c553ee, type: 3}
 --- !u!137 &137827093406063252
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
